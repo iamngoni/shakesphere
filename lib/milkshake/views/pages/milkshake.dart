@@ -28,7 +28,7 @@ class MilkshakeApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blueGrey,
             scaffoldBackgroundColor: AppColors.white,
-            fontFamily: 'Inter',
+            fontFamily: 'Nunito',
           ),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
