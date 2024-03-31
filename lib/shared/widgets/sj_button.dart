@@ -16,7 +16,7 @@ class SjButton extends StatelessWidget {
     required this.text,
     this.onTap,
     this.color = AppColors.white,
-    this.backgroundColor = AppColors.teal,
+    this.backgroundColor = AppColors.blue,
     this.borderRadius = 10,
     this.verticalPadding = 7,
     super.key,

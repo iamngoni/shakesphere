@@ -53,7 +53,7 @@ Future<(String, bool)?> showConfirmActionWithPinDialog(
                 return Text(
                   title,
                   style: TextStyle(
-                    color: AppColors.teal,
+                    color: AppColors.blue,
                     fontWeight: FontWeight.w700,
                     fontSize: sy(12),
                   ),
@@ -70,7 +70,7 @@ Future<(String, bool)?> showConfirmActionWithPinDialog(
                 Text(
                   message,
                   style: TextStyle(
-                    color: AppColors.teal,
+                    color: AppColors.blue,
                     fontWeight: FontWeight.w400,
                     fontSize: sy(9),
                   ),
@@ -81,7 +81,7 @@ Future<(String, bool)?> showConfirmActionWithPinDialog(
                 SjSensitiveTextField(
                   controller: pinController,
                   label: 'PIN',
-                  labelColor: AppColors.teal,
+                  labelColor: AppColors.blue,
                   hint: 'Enter PIN',
                   keyboardType: TextInputType.number,
                 ),
@@ -96,7 +96,7 @@ Future<(String, bool)?> showConfirmActionWithPinDialog(
           child: const Text(
             'Cancel',
             style: TextStyle(
-              color: AppColors.teal,
+              color: AppColors.blue,
             ),
           ),
         ),
@@ -105,7 +105,7 @@ Future<(String, bool)?> showConfirmActionWithPinDialog(
           child: const Text(
             'Continue',
             style: TextStyle(
-              color: AppColors.teal,
+              color: AppColors.blue,
               fontWeight: FontWeight.w900,
             ),
           ),

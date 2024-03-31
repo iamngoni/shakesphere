@@ -43,7 +43,7 @@ class SjNoLabelDropdownButton<T> extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.white,
             border: Border.all(
-              color: AppColors.teal.withOpacity(0.2),
+              color: AppColors.blue.withOpacity(0.2),
             ),
             borderRadius: BorderRadius.circular(10),
           ),

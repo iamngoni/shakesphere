@@ -64,7 +64,7 @@ class SjTextField extends StatelessWidget {
               decoration: BoxDecoration(
                 color: backgroundColor,
                 border: Border.all(
-                  color: AppColors.teal.withOpacity(0.2),
+                  color: AppColors.blue.withOpacity(0.2),
                 ),
                 borderRadius: BorderRadius.circular(borderRadius),
               ),

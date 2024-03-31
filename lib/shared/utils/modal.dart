@@ -47,7 +47,7 @@ Future<void> _showMaterialModal(
 }) async {
   return showMaterialModalBottomSheet(
     context: context,
-    barrierColor: AppColors.teal.withOpacity(0.9),
+    barrierColor: AppColors.blue.withOpacity(0.9),
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(
         top: Radius.circular(20),
@@ -67,7 +67,7 @@ Future<void> _showCupertinoModal(
   return showCupertinoModalBottomSheet(
     context: context,
     topRadius: const Radius.circular(20),
-    barrierColor: AppColors.teal.withOpacity(0.9),
+    barrierColor: AppColors.blue.withOpacity(0.9),
     builder: (context) {
       return Material(
         child: _buildSizedBox(

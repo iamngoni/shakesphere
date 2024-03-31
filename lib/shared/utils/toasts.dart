@@ -14,7 +14,7 @@ import '../widgets/toasts_overlay.dart';
 
 class Toasts {
   static void showSuccess(String message, BuildContext context) {
-    _show(message, AppColors.teal, context);
+    _show(message, AppColors.blue, context);
   }
 
   static void showError(String message, BuildContext context) {
