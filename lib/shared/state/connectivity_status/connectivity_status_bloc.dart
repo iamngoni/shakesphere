@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +30,28 @@ class ConnectivityStatusBloc
       Emitter<ConnectivityStatusState> emit,
     ) {
       emit(Offline());
+    });
+
+    on<CheckConnection>((event, emit) async {
+      emit(Idle());
+      try {
+        // use lookup to get the ConnectivityService
+        final result = await InternetAddress.lookup('google.com');
+        if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+          emit(Connected());
+        } else {
+          emit(Offline());
+        }
+      } catch (e, s) {
+        log(e.toString(), error: e, stackTrace: s);
+        final ConnectivityResult result =
+            await Connectivity().checkConnectivity();
+        if (result != ConnectivityResult.none) {
+          emit(Connected());
+        } else {
+          emit(Offline());
+        }
+      }
     });
   }
 

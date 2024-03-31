@@ -19,6 +19,7 @@ class SjButton extends StatelessWidget {
     this.backgroundColor = AppColors.blue,
     this.borderRadius = 10,
     this.verticalPadding = 7,
+    this.icon = Icons.arrow_forward,
     super.key,
   });
 
@@ -28,6 +29,7 @@ class SjButton extends StatelessWidget {
   final Color backgroundColor;
   final double borderRadius;
   final double verticalPadding;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -45,13 +47,23 @@ class SjButton extends StatelessWidget {
               color: backgroundColor,
               borderRadius: BorderRadius.circular(borderRadius),
             ),
-            child: Text(
-              text,
-              style: TextStyle(
-                color: color,
-                fontWeight: FontWeight.w500,
-                fontSize: sy(10),
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  text,
+                  style: TextStyle(
+                    color: color,
+                    fontWeight: FontWeight.w500,
+                    fontSize: sy(9),
+                  ),
+                ),
+                Icon(
+                  icon,
+                  color: color,
+                  size: sy(12),
+                ),
+              ],
             ),
           ),
         );

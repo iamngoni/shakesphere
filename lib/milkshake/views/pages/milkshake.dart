@@ -9,11 +9,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../auth/views/pages/get_started.dart';
 import '../../../l10n/l10n.dart';
 import '../../../shared/configs/colors.dart';
+import '../../../shared/configs/theme.dart';
 import '../../../shared/models/language.dart';
+import '../../../shared/state/connectivity_status/connectivity_status_bloc.dart';
 import '../../../shared/state/locale/locale_bloc.dart';
 import '../../../shared/utils/keyboard.dart';
+import '../../../shared/widgets/device_offline_page.dart';
+import '../../../shared/widgets/loader.dart';
 
 class MilkshakeApp extends StatelessWidget {
   const MilkshakeApp({super.key});
@@ -25,11 +30,7 @@ class MilkshakeApp extends StatelessWidget {
         return MaterialApp(
           title: 'Shakesphere',
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primarySwatch: Colors.blueGrey,
-            scaffoldBackgroundColor: AppColors.white,
-            fontFamily: 'Nunito',
-          ),
+          theme: AppTheme.lightTheme,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           locale: Locale(state.code),
@@ -41,7 +42,23 @@ class MilkshakeApp extends StatelessWidget {
               child: child,
             );
           },
-          home: const Placeholder(),
+          home: BlocBuilder<ConnectivityStatusBloc, ConnectivityStatusState>(
+            builder: (context, state) {
+              return switch (state.runtimeType) {
+                Idle => const ColoredBox(
+                    color: AppColors.blue,
+                    child: Center(
+                      child: LoaderWidget(
+                        color: AppColors.white,
+                      ),
+                    ),
+                  ),
+                Offline => const DeviceOfflinePage(),
+                Connected => const GetStartedPage(),
+                Type() => const SizedBox.shrink(),
+              };
+            },
+          ),
         );
       },
     );

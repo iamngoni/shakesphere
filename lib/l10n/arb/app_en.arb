@@ -1,7 +1,35 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
+    "deviceOffline_Title": "Device is offline",
+    "@deviceOffline_Title": {
+        "description": "Device is offline"
+    },
+    "deviceOffline_Message": "Your device is currently offline and not connected to the internet. Please check your connection.",
+    "@deviceOffline_Message": {
+        "description": "Message displayed when the device is offline"
+    },
+    "deviceOffline_BtnTitle": "Sorted now, let's try again",
+    "@deviceOffline_BtnTitle": {
+        "description": "Title of the button displayed when the device is offline"
+    },
+    "getStarted_Title": "Hi you!",
+    "@getStarted_Title": {
+        "description": "Title of the get started screen"
+    },
+    "getStarted_Message": "Welcome to a World of Creamy Delights! Dive into an ocean of flavors, customize your perfect shake, and enjoy doorstep delivery in minutes.",
+    "@getStarted_Message": {
+        "description": "Subtitle of the get started screen"
+    },
+    "getStarted_BtnTitle": "GET STARTED",
+    "@getStarted_BtnTitle": {
+        "description": "Title of the button displayed on the get started screen"
+    },
+    "getStarted_AlreadyHaveAccount": "Already have a SHAKESPHERE account?",
+    "@getStarted_AlreadyHaveAccount": {
+        "description": "Subtitle displayed on the get started screen"
+    },
+    "getStarted_BtnTitle2": "Sign in!",
+    "@getStarted_BtnTitle2": {
+        "description": "Title of the button displayed on the get started screen"
     }
 }

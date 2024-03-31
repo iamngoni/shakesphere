@@ -1,7 +1,9 @@
 {
     "@@locale": "es",
-    "counterAppBarTitle": "Contador",
-    "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
-    }
+    "deviceOffline": "El dispositivo está desconectado",
+    "deviceOfflineMessage": "Tu dispositivo está actualmente desconectado y no conectado a internet. Por favor, verifica tu conexión.",
+    "deviceOfflineBtnTitle": "Resuelto, intentemos de nuevo",
+    "getStartedTitle": "¡Hola!",
+    "getStartedMessage": "¡Bienvenido a un mundo de delicias cremosas! Sumérgete en un océano de sabores, personaliza tu batido perfecto y disfruta de la entrega a tu puerta en minutos.",
+    "getStartedBtnTitle": "COMENZAR"
 }

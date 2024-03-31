@@ -13,12 +13,13 @@ class AppColors {
 
   static const Color white = Color(0xFFFFFFFF);
   static const Color blue = Color(0xFF123959);
-  static const Color background = Color(0xFFF0EDED);
+  static const Color altBackground = Color(0xFFD0DBEB);
+  static const Color background = Color(0xFFEAEBF5);
   static const Color grey = Color(0xFF908D8D);
   static const Color lightGrey = Color(0xFFD9D9D9);
   static const Color black = Color(0xFF000000);
   static const Color red = Color(0xFFEE0F0F);
-  static const Color border = Color(0xFF333333);
+  static const Color border = Color(0xFF9BABB9);
   static const Color green = Color(0xFF117908);
 
   static const MaterialColor materialBlue = MaterialColor(0xFF123959, {

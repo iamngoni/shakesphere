@@ -6,3 +6,5 @@ abstract class ConnectivityStatusEvent {}
 class DeviceConnected extends ConnectivityStatusEvent {}
 
 class DeviceDisconnected extends ConnectivityStatusEvent {}
+
+class CheckConnection extends ConnectivityStatusEvent {}
