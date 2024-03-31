@@ -57,8 +57,8 @@ class _SjSensitiveTextFieldState extends State<SjSensitiveTextField> {
           child: TextFormField(
             controller: widget.controller,
             style: TextStyle(
-              color: AppColors.black,
-              fontWeight: FontWeight.w400,
+              color: AppColors.blue,
+              fontWeight: FontWeight.w500,
               fontSize: sy(9),
             ),
             decoration: InputDecoration(

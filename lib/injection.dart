@@ -14,16 +14,18 @@ import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:sentry_dio/sentry_dio.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
-import 'shared/utils/dio_request_interceptor.dart';
 
 import 'injection.config.dart';
+import 'shared/utils/dio_request_interceptor.dart';
+import 'shared/utils/dio_response_interceptor.dart';
 
 final GetIt getIt = GetIt.instance
   ..registerSingleton<Dio>(
     Dio()
-      ..options.baseUrl = 'http://localhost:8080/api/1.0'
+      ..options.baseUrl = 'http://localhost:5243/api/1.0'
       ..interceptors.add(CurlLoggerDioInterceptor(printOnSuccess: true))
       ..interceptors.add(DioRequestInterceptor())
+      ..interceptors.add(DioResponseInterceptor())
       ..interceptors.add(
         PrettyDioLogger(
           requestHeader: true,

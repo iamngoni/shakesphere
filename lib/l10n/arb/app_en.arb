@@ -56,6 +56,26 @@
     "@signup_Title": {
         "description": "Title of the signup screen"
     },
+    "signup_FirstNameHint": "First name",
+    "@signup_FirstNameHint": {
+        "description": "Hint text displayed in the first name input field on the signup screen"
+    },
+    "signup_LastNameHint": "Last name",
+    "@signup_LastNameHint": {
+        "description": "Hint text displayed in the last name input field on the signup screen"
+    },
+    "signup_EmailHint": "Email",
+    "@signup_EmailHint": {
+        "description": "Hint text displayed in the email input field on the signup screen"
+    },
+    "signup_PhoneHint": "Phone number",
+    "@signup_PhoneHint": {
+        "description": "Hint text displayed in the phone number input field on the signup screen"
+    },
+    "signup_PasswordHint": "Password",
+    "@signup_PasswordHint": {
+        "description": "Hint text displayed in the password input field on the signup screen"
+    },
     "termsOfUse_Title": "Terms of Use",
     "@termsOfUse_Title": {
         "description": "Title of the terms of use screen"
@@ -123,5 +143,17 @@
     "termsOfUse_ConfirmationText": "By using our app/website, you confirm that you have read, understood, and agreed to these Terms of Use.",
     "@termsOfUse_ConfirmationText": {
         "description": "Text displayed on the terms of use screen"
+    },
+    "fieldIsRequiredError": "This field is required",
+    "@fieldIsRequiredError": {
+        "description": "Error message displayed when a required field is empty"
+    },
+    "invalidPasswordError": "Password must be at least 8 characters long",
+    "@invalidPasswordError": {
+        "description": "Error message displayed when the password is invalid"
+    },
+    "invalidEmailError": "Please enter a valid email address",
+    "@invalidEmailError": {
+        "description": "Error message displayed when the email is invalid"
     }
 }

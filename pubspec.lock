@@ -629,6 +629,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  localregex:
+    dependency: "direct main"
+    description:
+      name: localregex
+      sha256: "58a9198d9878f25f5eee90a2054acbfe621b301ff30212c49602d3c499f65c9f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.5"
   logging:
     dependency: transitive
     description:

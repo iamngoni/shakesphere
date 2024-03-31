@@ -47,8 +47,8 @@ class SjTextField extends StatelessWidget {
           ),
           child: TextFormField(
             style: TextStyle(
-              color: AppColors.black,
-              fontWeight: FontWeight.w400,
+              color: AppColors.blue,
+              fontWeight: FontWeight.w500,
               fontSize: sy(9),
             ),
             controller: controller,

@@ -8,8 +8,13 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:dio/dio.dart' as _i11;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
+import 'package:shakesphere/auth/models/repos/abs/auth_repository.dart' as _i9;
+import 'package:shakesphere/auth/models/repos/impl/dio_auth_repository.dart'
+    as _i10;
+import 'package:shakesphere/auth/state/auth/auth_bloc.dart' as _i12;
 import 'package:shakesphere/shared/services/notifications.dart' as _i8;
 import 'package:shakesphere/shared/services/secure_storage.dart' as _i6;
 import 'package:shakesphere/shared/services/storage.dart' as _i5;
@@ -37,6 +42,10 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i6.SecureStorageService.getInstance());
     gh.singleton<_i7.VibrationService>(() => _i7.VibrationService());
     gh.singleton<_i8.PushNotifications>(() => _i8.PushNotifications());
+    gh.lazySingleton<_i9.AuthRepository>(
+        () => _i10.DioAuthRepository(gh<_i11.Dio>()));
+    gh.factory<_i12.AuthBloc>(
+        () => _i12.AuthBloc(repository: gh<_i9.AuthRepository>()));
     return this;
   }
 }
