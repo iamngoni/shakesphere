@@ -9,13 +9,17 @@
 import 'package:flutter/material.dart';
 import 'package:relative_scale/relative_scale.dart';
 
+import '../configs/colors.dart';
+
 class ToastsOverlay extends StatefulWidget {
   const ToastsOverlay({
+    required this.title,
     required this.message,
     required this.backgroundColor,
     super.key,
   });
 
+  final String title;
   final String message;
   final Color backgroundColor;
 
@@ -73,6 +77,45 @@ class _ToastsOverlayState extends State<ToastsOverlay>
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      widget.title,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: sy(8),
+                      ),
+                    ),
+                    SizedBox(
+                      height: sy(12),
+                      width: sy(12),
+                      child: Stack(
+                        children: [
+                          CircularProgressIndicator(
+                            value: _animation.value,
+                            backgroundColor: Colors.white.withOpacity(0.5),
+                            valueColor: const AlwaysStoppedAnimation<Color>(
+                              AppColors.white,
+                            ),
+                            strokeCap: StrokeCap.round,
+                          ),
+                          Center(
+                            child: Icon(
+                              Icons.close,
+                              color: AppColors.white,
+                              size: sy(10),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: sy(2),
+                ),
                 Text(
                   widget.message,
                   style: TextStyle(
@@ -80,14 +123,6 @@ class _ToastsOverlayState extends State<ToastsOverlay>
                     fontWeight: FontWeight.w400,
                     fontSize: sy(8),
                   ),
-                ),
-                SizedBox(
-                  height: sy(5),
-                ),
-                LinearProgressIndicator(
-                  value: _animation.value,
-                  backgroundColor: Colors.white.withOpacity(0.5),
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ],
             ),

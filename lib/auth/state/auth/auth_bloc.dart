@@ -21,6 +21,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<CheckAuthEvent>(onCheckAuthEvent);
     on<SignupEvent>(onSignUpEvent);
     on<SignInEvent>(onSignInEvent);
+    on<SignOutEvent>(onSignOutEvent);
   }
 
   Future<void> onCheckAuthEvent(
@@ -77,6 +78,20 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       log(e.toString(), error: e, stackTrace: s);
       unawaited(Sentry.captureException(e, stackTrace: s));
       emit(AuthError(ApplicationError.unknownError()));
+    }
+  }
+
+  Future<void> onSignOutEvent(
+    SignOutEvent event,
+    Emitter<AuthState> emit,
+  ) async {
+    try {
+      await repository.signOut();
+      emit(const AuthInitial());
+    } catch (e, s) {
+      log(e.toString(), error: e, stackTrace: s);
+      unawaited(Sentry.captureException(e, stackTrace: s));
+      emit(const AuthInitial());
     }
   }
 

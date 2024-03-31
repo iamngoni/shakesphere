@@ -26,3 +26,10 @@ class SignInEvent extends AuthEvent {
   @override
   List<Object> get props => [dto];
 }
+
+class SignOutEvent extends AuthEvent {
+  const SignOutEvent();
+
+  @override
+  List<Object> get props => [];
+}

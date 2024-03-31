@@ -29,7 +29,7 @@ extension ContextExtensions<T> on BuildContext {
   void goBack({dynamic value}) => Navigator.of(this).pop(value);
 
   // notify
-  void notify(String message, {bool isError = false}) => isError
-      ? Toasts.showError(message, this)
-      : Toasts.showSuccess(message, this);
+  void notify(String message, {bool isError = false, String? title}) => isError
+      ? Toasts.showError(title ?? 'Attention Needed', message, this)
+      : Toasts.showSuccess(title ?? 'Success!', message, this);
 }

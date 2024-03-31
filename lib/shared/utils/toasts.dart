@@ -13,15 +13,16 @@ import '../configs/colors.dart';
 import '../widgets/toasts_overlay.dart';
 
 class Toasts {
-  static void showSuccess(String message, BuildContext context) {
-    _show(message, AppColors.blue, context);
+  static void showSuccess(String title, String message, BuildContext context) {
+    _show(title, message, AppColors.blue, context);
   }
 
-  static void showError(String message, BuildContext context) {
-    _show(message, AppColors.red, context);
+  static void showError(String title, String message, BuildContext context) {
+    _show(title, message, AppColors.red, context);
   }
 
   static void _show(
+    String title,
     String message,
     Color backgroundColor,
     BuildContext context,
@@ -30,6 +31,7 @@ class Toasts {
 
     final overlayEntry = OverlayEntry(
       builder: (context) => ToastsOverlay(
+        title: title,
         message: message,
         backgroundColor: backgroundColor,
       ),
@@ -37,6 +39,6 @@ class Toasts {
 
     overlayState.insert(overlayEntry);
 
-    Future.delayed(4.seconds, overlayEntry.remove);
+    Future.delayed(5.seconds, overlayEntry.remove);
   }
 }

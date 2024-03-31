@@ -101,4 +101,10 @@ class DioAuthRepository implements AuthRepository {
       return left(ApplicationError.unknownError());
     }
   }
+
+  @override
+  Future<void> signOut() async {
+    await $secureStorage.clearDisk();
+    $storage.clearDisk();
+  }
 }

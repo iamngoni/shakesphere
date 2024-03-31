@@ -16,4 +16,5 @@ abstract class AuthRepository {
   Future<Either<ApplicationError, void>> isAuthenticated();
   Future<Either<ApplicationError, void>> signUp(SignupDTO dto);
   Future<Either<ApplicationError, void>> signIn(SigninDTO dto);
+  Future<void> signOut();
 }

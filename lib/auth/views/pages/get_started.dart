@@ -102,16 +102,18 @@ class GetStartedPage extends StatelessWidget {
                       height: sy(15),
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          context.l10n.getStarted_AlreadyHaveAccount,
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w400,
-                            fontSize: sy(9),
+                        Expanded(
+                          child: Text(
+                            context.l10n.getStarted_AlreadyHaveAccount,
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w400,
+                              fontSize: sy(9),
+                            ),
                           ),
                         ),
+                        SizedBox(width: sx(20),),
                         GestureDetector(
                           onTap: () {
                             context.goTo(

@@ -14,7 +14,7 @@ import '../configs/colors.dart';
 import '../models/language.dart';
 import '../state/locale/locale_bloc.dart';
 
-class LanguageSelector extends StatelessWidget {
+class LanguageSelector extends StatefulWidget {
   const LanguageSelector({
     this.iconColor = AppColors.white,
     this.textColor = AppColors.white,
@@ -27,6 +27,13 @@ class LanguageSelector extends StatelessWidget {
   final Color backgroundColor;
 
   @override
+  State<LanguageSelector> createState() => _LanguageSelectorState();
+}
+
+class _LanguageSelectorState extends State<LanguageSelector> {
+  final GlobalKey _popupMenuKey = GlobalKey();
+
+  @override
   Widget build(BuildContext context) {
     return RelativeBuilder(
       builder: (context, height, width, sy, sx) {
@@ -37,6 +44,7 @@ class LanguageSelector extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 PopupMenuButton(
+                  key: _popupMenuKey,
                   itemBuilder: (context) {
                     return Language.values.map((l) {
                       return PopupMenuItem(
@@ -68,26 +76,33 @@ class LanguageSelector extends StatelessWidget {
                   child: Icon(
                     Icons.language,
                     size: sy(17),
-                    color: iconColor,
+                    color: widget.iconColor,
                   ),
                 ),
                 Positioned(
                   top: 0,
                   right: -sx(10),
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: sx(5),
-                    ),
-                    decoration: BoxDecoration(
-                      color: backgroundColor,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Text(
-                      state.code.toUpperCase(),
-                      style: TextStyle(
-                        color: textColor,
-                        fontWeight: FontWeight.w700,
-                        fontSize: sy(7),
+                  child: InkWell(
+                    onTap: () {
+                      (_popupMenuKey.currentState!
+                              as PopupMenuButtonState<Language>)
+                          .showButtonMenu();
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: sx(5),
+                      ),
+                      decoration: BoxDecoration(
+                        color: widget.backgroundColor,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Text(
+                        state.code.toUpperCase(),
+                        style: TextStyle(
+                          color: widget.textColor,
+                          fontWeight: FontWeight.w700,
+                          fontSize: sy(7),
+                        ),
                       ),
                     ),
                   ),
