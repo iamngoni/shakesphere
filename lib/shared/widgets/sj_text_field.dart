@@ -14,84 +14,65 @@ import '../configs/colors.dart';
 class SjTextField extends StatelessWidget {
   const SjTextField({
     required this.controller,
-    required this.label,
     required this.hint,
     this.validator,
     this.keyboardType = TextInputType.text,
     this.readOnly = false,
     this.maxLines = 1,
-    this.backgroundColor = AppColors.white,
-    this.borderColor,
-    this.borderRadius = 10,
-    this.labelColor = AppColors.black,
+    this.backgroundColor = AppColors.altBackground,
+    this.borderRadius = 5,
     super.key,
   });
 
   final TextEditingController controller;
-  final String label;
   final String hint;
   final String? Function(String?)? validator;
   final TextInputType keyboardType;
   final bool readOnly;
   final int maxLines;
   final Color backgroundColor;
-  final Color? borderColor;
   final double borderRadius;
-  final Color labelColor;
 
   @override
   Widget build(BuildContext context) {
     return RelativeBuilder(
       builder: (context, height, width, sy, sx) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              label,
-              style: TextStyle(
-                color: labelColor,
-                fontWeight: FontWeight.w600,
-                fontSize: sy(10),
-              ),
+        return Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: sx(20),
+          ),
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: BorderRadius.circular(borderRadius),
+          ),
+          child: TextFormField(
+            style: TextStyle(
+              color: AppColors.black,
+              fontWeight: FontWeight.w400,
+              fontSize: sy(9),
             ),
-            SizedBox(
-              height: sy(5),
+            controller: controller,
+            decoration: InputDecoration(
+              labelText: hint,
+              labelStyle: TextStyle(
+                color: AppColors.blue,
+                fontWeight: FontWeight.w400,
+                fontSize: sy(8),
+              ),
+              hintText: hint,
+              hintStyle: TextStyle(
+                color: AppColors.blue,
+                fontWeight: FontWeight.w400,
+                fontSize: sy(9),
+              ),
+              border: InputBorder.none,
             ),
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: sx(20),
-              ),
-              decoration: BoxDecoration(
-                color: backgroundColor,
-                border: Border.all(
-                  color: AppColors.blue.withOpacity(0.2),
-                ),
-                borderRadius: BorderRadius.circular(borderRadius),
-              ),
-              child: TextFormField(
-                style: TextStyle(
-                  color: AppColors.black,
-                  fontWeight: FontWeight.w400,
-                  fontSize: sy(9),
-                ),
-                controller: controller,
-                decoration: InputDecoration(
-                  hintText: hint,
-                  hintStyle: TextStyle(
-                    color: AppColors.grey,
-                    fontWeight: FontWeight.w400,
-                    fontSize: sy(9),
-                  ),
-                  border: InputBorder.none,
-                ),
-                keyboardType: keyboardType,
-                readOnly: readOnly,
-                autovalidateMode: AutovalidateMode.onUserInteraction,
-                validator: validator,
-                maxLines: maxLines,
-              ),
-            ),
-          ],
+            keyboardType: keyboardType,
+            readOnly: readOnly,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            validator: validator,
+            maxLines: maxLines,
+          ),
         );
       },
     );

@@ -80,8 +80,6 @@ Future<(String, bool)?> showConfirmActionWithPinDialog(
                 ),
                 SjSensitiveTextField(
                   controller: pinController,
-                  label: 'PIN',
-                  labelColor: AppColors.blue,
                   hint: 'Enter PIN',
                   keyboardType: TextInputType.number,
                 ),

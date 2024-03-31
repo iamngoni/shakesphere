@@ -101,11 +101,7 @@ class GetStartedPage extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {
-                          context.goTo(
-                            page: const SignupPage(),
-                          );
-                        },
+                        onTap: () {},
                         child: Text(
                           context.l10n.getStarted_BtnTitle2,
                           style: TextStyle(

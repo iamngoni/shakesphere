@@ -31,5 +31,97 @@
     "getStarted_BtnTitle2": "Sign in!",
     "@getStarted_BtnTitle2": {
         "description": "Title of the button displayed on the get started screen"
+    },
+    "signup_RegisterBtnTitle": "REGISTER",
+    "@signup_RegisterBtnTitle": {
+        "description": "Title of the register button displayed on the signup screen"
+    },
+    "signup_TermsAndConditions1": "By continuing you are agreeing to our",
+    "@signup_TermsAndConditions1": {
+        "description": "Text displayed on the signup screen"
+    },
+    "signup_TermsAndConditions2": "Terms of use",
+    "@signup_TermsAndConditions2": {
+        "description": "Text displayed on the signup screen"
+    },
+    "signup_TermsAndConditions3": "and",
+    "@signup_TermsAndConditions3": {
+        "description": "Text displayed on the signup screen"
+    },
+    "signup_TermsAndConditions4": "Privacy policy",
+    "@signup_TermsAndConditions4": {
+        "description": "Text displayed on the signup screen"
+    },
+    "signup_Title": "Create an account",
+    "@signup_Title": {
+        "description": "Title of the signup screen"
+    },
+    "termsOfUse_Title": "Terms of Use",
+    "@termsOfUse_Title": {
+        "description": "Title of the terms of use screen"
+    },
+    "termsOfUse_Message": "Welcome to SHAKESPHERE (\"we,\" \"us,\" \"our\"). By accessing or using our app/website, you agree to be bound by these Terms of Use (\"Terms\"). If you do not agree with any part of these Terms, please do not use our app/website.",
+    "@termsOfUse_Message": {
+        "description": "Subtitle of the terms of use screen"
+    },
+    "termsOfUse_Section1Title": "1. Use of Our Service",
+    "@termsOfUse_Section1Title": {
+        "description": "Title of the section displayed on the terms of use screen"
+    },
+    "termsOfUse_Section1Message": "You must use our service for lawful purposes only and in compliance with these Terms. Any unauthorized or illegal use of our service is strictly prohibited.",
+    "@termsOfUse_Section1Message": {
+        "description": "Text displayed on the terms of use screen"
+    },
+    "termsOfUse_Section2Title": "2. Account Responsibility",
+    "@termsOfUse_Section2Title": {
+        "description": "Title of the section displayed on the terms of use screen"
+    },
+    "termsOfUse_Section2Message": "If you create an account with us, you are responsible for maintaining the confidentiality of your account details and for all activities under your account. You must immediately notify us of any unauthorized use of your account.",
+    "@termsOfUse_Section2Message": {
+        "description": "Text displayed on the terms of use screen"
+    },
+    "termsOfUse_Section3Title": "3. Intellectual Property",
+    "@termsOfUse_Section3Title": {
+        "description": "Title of the section displayed on the terms of use screen"
+    },
+    "termsOfUse_Section3Message": "All content on our app/website, including text, graphics, logos, and software, is our property or the property of our licensors and is protected by intellectual property laws. You may not use our content without our express permission.",
+    "@termsOfUse_Section3Message": {
+        "description": "Text displayed on the terms of use screen"
+    },
+    "termsOfUse_Section4Title": "4. User Conduct",
+    "@termsOfUse_Section4Title": {
+        "description": "Title of the section displayed on the terms of use screen"
+    },
+    "termsOfUse_Section4Message": "You must not use our app/website in any way that causes, or is likely to cause, the app/website or access to it to be interrupted, damaged, or impaired in any way. You understand that you, and not we, are responsible for all electronic communications and content sent from your device to us.",
+    "@termsOfUse_Section4Message": {
+        "description": "Text displayed on the terms of use screen"
+    },
+    "termsOfUse_Section5Title": "5. Limitation of Liability",
+    "@termsOfUse_Section5Title": {
+        "description": "Title of the section displayed on the terms of use screen"
+    },
+    "termsOfUse_Section5Message": "We will not be liable to you for any loss or damage, whether in contract, tort (including negligence), breach of statutory duty, or otherwise, even if foreseeable, arising under or in connection with your use of, or inability to use, our app/website.",
+    "@termsOfUse_Section5Message": {
+        "description": "Text displayed on the terms of use screen"
+    },
+    "termsOfUse_Section6Title": "6. Amendments to Terms",
+    "@termsOfUse_Section6Title": {
+        "description": "Title of the section displayed on the terms of use screen"
+    },
+    "termsOfUse_Section6Message": "We reserve the right to amend these Terms at any time. All amendments will be effective immediately upon posting on our app/website. Your continued use of our app/website will constitute acceptance of the amended Terms.",
+    "@termsOfUse_Section6Message": {
+        "description": "Text displayed on the terms of use screen"
+    },
+    "termsOfUse_Section7Title": "7. Governing Law",
+    "@termsOfUse_Section7Title": {
+        "description": "Title of the section displayed on the terms of use screen"
+    },
+    "termsOfUse_Section7Message": "These Terms are governed by the laws of the South Africa. Any dispute arising from these Terms will be subject to the exclusive jurisdiction of the courts of the South Africa.",
+    "@termsOfUse_Section7Message": {
+        "description": "Text displayed on the terms of use screen"
+    },
+    "termsOfUse_ConfirmationText": "By using our app/website, you confirm that you have read, understood, and agreed to these Terms of Use.",
+    "@termsOfUse_ConfirmationText": {
+        "description": "Text displayed on the terms of use screen"
     }
 }
