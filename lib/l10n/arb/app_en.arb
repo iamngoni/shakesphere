@@ -155,5 +155,17 @@
     "invalidEmailError": "Please enter a valid email address",
     "@invalidEmailError": {
         "description": "Error message displayed when the email is invalid"
+    },
+    "signIn_Title": "Sign in",
+    "@signIn_Title": {
+        "description": "Title of the sign in screen"
+    },
+    "signIn_SignInBtnTitle": "SIGN IN",
+    "@signIn_SignInBtnTitle": {
+        "description": "Title of the sign in button displayed on the sign in screen"
+    },
+    "signIn_forgotYourPasswordBtnTitle": "Forgot your password?",
+    "@signIn_forgotYourPasswordBtnTitle": {
+        "description": "Title of the forgot your password button displayed on the sign in screen"
     }
 }
