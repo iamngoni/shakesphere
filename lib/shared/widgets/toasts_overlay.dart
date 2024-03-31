@@ -37,7 +37,7 @@ class _ToastsOverlayState extends State<ToastsOverlay>
     super.initState();
 
     _controller = AnimationController(
-      duration: const Duration(seconds: 4),
+      duration: const Duration(seconds: 5),
       vsync: this,
     );
 
