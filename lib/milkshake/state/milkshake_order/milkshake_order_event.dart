@@ -27,3 +27,42 @@ class SelectThicknessEvent extends MilkshakeOrderEvent {
   @override
   List<Object> get props => [thickness];
 }
+
+class SelectToppingEvent extends MilkshakeOrderEvent {
+  const SelectToppingEvent(this.topping);
+  final Topping topping;
+
+  @override
+  List<Object> get props => [topping];
+}
+
+class UnselectToppingEvent extends MilkshakeOrderEvent {
+  const UnselectToppingEvent(this.topping);
+  final Topping topping;
+
+  @override
+  List<Object> get props => [topping];
+}
+
+class SetCollectionTimeEvent extends MilkshakeOrderEvent {
+  const SetCollectionTimeEvent(this.collectionTime);
+  final TimeOfDay collectionTime;
+
+  @override
+  List<Object> get props => [collectionTime];
+}
+
+class SelectPaymentMethodEvent extends MilkshakeOrderEvent {
+  const SelectPaymentMethodEvent(this.paymentMethod);
+  final PaymentMethod paymentMethod;
+
+  @override
+  List<Object> get props => [paymentMethod];
+}
+
+class ClearOrderEvent extends MilkshakeOrderEvent {
+  const ClearOrderEvent();
+
+  @override
+  List<Object> get props => [];
+}

@@ -1,6 +1,6 @@
 //
 //  shakesphere
-//  pick_flavors_tab
+//  select_thickness_tab
 //
 //  Created by Ngonidzashe Mangudya on 01/04/2024.
 //  Copyright (c) 2024 ModestNerds, Co
@@ -12,15 +12,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:handy_extensions/handy_extensions.dart';
 import 'package:relative_scale/relative_scale.dart';
 
-import '../../../l10n/l10n.dart';
-import '../../../shared/configs/colors.dart';
-import '../../../shared/widgets/loader.dart';
+import '../../../../l10n/l10n.dart';
+import '../../../../shared/configs/colors.dart';
+import '../../../../shared/widgets/loader.dart';
 import '../../state/configs/configs_bloc.dart';
 import '../../state/milkshake_order/milkshake_order_bloc.dart';
-import 'flavor_list_tile.dart';
+import 'thickness_list_tile.dart';
 
-class PickFlavorsTab extends StatelessWidget {
-  const PickFlavorsTab({
+class SelectThicknessTab extends StatelessWidget {
+  const SelectThicknessTab({
     super.key,
   });
 
@@ -43,8 +43,45 @@ class PickFlavorsTab extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      GestureDetector(
+                        onTap: () {
+                          context
+                              .read<MilkshakeOrderBloc>()
+                              .add(const MoveToStageEvent(0));
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: sx(10),
+                            vertical: sy(2),
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.blue,
+                            borderRadius: BorderRadius.circular(7),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                CupertinoIcons.arrow_left,
+                                color: AppColors.white,
+                                size: sy(12),
+                              ),
+                              SizedBox(
+                                width: sx(10),
+                              ),
+                              Text(
+                                context.l10n.milkshakeOrder_PickFlavor,
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: sy(8),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                       Text(
-                        context.l10n.milkshakeOrder_PickFlavor,
+                        context.l10n.milkshakeOrder_Thickness,
                         style: TextStyle(
                           color: AppColors.blue,
                           fontWeight: FontWeight.w900,
@@ -55,12 +92,12 @@ class PickFlavorsTab extends StatelessWidget {
                         builder: (context, state) {
                           return AnimatedSwitcher(
                             duration: 300.milliseconds,
-                            child: state.flavor != null
+                            child: state.thickness != null
                                 ? GestureDetector(
                                     onTap: () {
                                       context
                                           .read<MilkshakeOrderBloc>()
-                                          .add(const MoveToStageEvent(1));
+                                          .add(const MoveToStageEvent(2));
                                     },
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
@@ -75,7 +112,7 @@ class PickFlavorsTab extends StatelessWidget {
                                         children: [
                                           Text(
                                             context
-                                                .l10n.milkshakeOrder_Thickness,
+                                                .l10n.milkshakeOrder_Toppings,
                                             style: TextStyle(
                                               color: AppColors.white,
                                               fontWeight: FontWeight.w700,
@@ -94,7 +131,9 @@ class PickFlavorsTab extends StatelessWidget {
                                       ),
                                     ),
                                   )
-                                : const SizedBox.shrink(),
+                                : SizedBox(
+                                    width: sx(100),
+                                  ),
                           );
                         },
                       ),
@@ -106,10 +145,10 @@ class PickFlavorsTab extends StatelessWidget {
                   Expanded(
                     child: ListView.separated(
                       padding: EdgeInsets.zero,
-                      itemCount: state.flavors.length,
+                      itemCount: state.thicknesses.length,
                       itemBuilder: (context, index) {
-                        final flavor = state.flavors[index];
-                        return FlavorListTile(flavor: flavor);
+                        final thickness = state.thicknesses[index];
+                        return ThicknessListTile(thickness: thickness);
                       },
                       separatorBuilder: (context, _) => const Divider(
                         color: AppColors.border,

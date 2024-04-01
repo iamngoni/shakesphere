@@ -1,6 +1,6 @@
 //
 //  shakesphere
-//  flavor_list_tile
+//  payment_method_tile
 //
 //  Created by Ngonidzashe Mangudya on 01/04/2024.
 //  Copyright (c) 2024 ModestNerds, Co
@@ -10,17 +10,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:relative_scale/relative_scale.dart';
 
-import '../../milkshake/models/data/flavor.dart';
-import '../../milkshake/state/milkshake_order/milkshake_order_bloc.dart';
-import '../configs/colors.dart';
+import '../../../shared/configs/colors.dart';
+import '../../models/data/payment_method.dart';
+import '../../state/milkshake_order/milkshake_order_bloc.dart';
 
-class FlavorListTile extends StatelessWidget {
-  const FlavorListTile({
-    required this.flavor,
+class PaymentMethodTile extends StatelessWidget {
+  const PaymentMethodTile({
+    required this.paymentMethod,
     super.key,
   });
 
-  final Flavor flavor;
+  final PaymentMethod paymentMethod;
 
   @override
   Widget build(BuildContext context) {
@@ -31,22 +31,14 @@ class FlavorListTile extends StatelessWidget {
             return ListTile(
               contentPadding: EdgeInsets.zero,
               title: Text(
-                flavor.name,
+                paymentMethod.value,
                 style: TextStyle(
                   color: AppColors.blue,
                   fontWeight: FontWeight.w400,
                   fontSize: sy(9),
                 ),
               ),
-              subtitle: Text(
-                'ZAR ${flavor.cost.toStringAsFixed(2)}',
-                style: TextStyle(
-                  color: AppColors.blue,
-                  fontWeight: FontWeight.w900,
-                  fontSize: sy(10),
-                ),
-              ),
-              trailing: state.flavor == flavor
+              trailing: state.paymentMethod == paymentMethod
                   ? Container(
                       height: sy(15),
                       width: sy(15),
@@ -65,7 +57,7 @@ class FlavorListTile extends StatelessWidget {
               onTap: () {
                 context
                     .read<MilkshakeOrderBloc>()
-                    .add(SelectFlavorEvent(flavor));
+                    .add(SelectPaymentMethodEvent(paymentMethod));
               },
             );
           },

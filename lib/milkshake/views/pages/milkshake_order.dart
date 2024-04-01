@@ -17,8 +17,12 @@ import '../../../shared/configs/colors.dart';
 import '../../../shared/extensions/context.dart';
 import '../../models/data/restaurant.dart';
 import '../../state/milkshake_order/milkshake_order_bloc.dart';
+import '../widgets/checkout_tab.dart';
+import '../widgets/payment_tab.dart';
 import '../widgets/pick_flavors_tab.dart';
+import '../widgets/select_thickness_tab.dart';
 import '../widgets/timeline_list.dart';
+import '../widgets/toppings_tab.dart';
 
 class MilkshakeOrderPage extends StatelessWidget {
   const MilkshakeOrderPage({required this.restaurant, super.key});
@@ -225,6 +229,10 @@ class MilkshakeOrderPage extends StatelessWidget {
                       builder: (context, state) {
                         return switch (state.currentStage) {
                           0 => const PickFlavorsTab(),
+                          1 => const SelectThicknessTab(),
+                          2 => const ToppingsTab(),
+                          3 => const PaymentTab(),
+                          4 => const CheckoutTab(),
                           _ => const SizedBox.shrink(),
                         };
                       },

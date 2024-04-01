@@ -243,5 +243,37 @@
     "milkshakeOrder_TotalAmount": "TOTAL AMOUNT",
     "@milkshakeOrder_TotalAmount": {
         "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_SelectPaymentMethod": "Select Payment Method",
+    "@milkshakeOrder_SelectPaymentMethod": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_SelectPickupTime": "Pickup Time",
+    "@milkshakeOrder_SelectPickupTime": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_TimeError": "Please select a valid pickup time",
+    "@milkshakeOrder_TimeError": {
+        "description": "Error message displayed when the pickup time is invalid"
+    },
+    "milkshakeOrder_OrderSummary": "Order Summary",
+    "@milkshakeOrder_OrderSummary": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Subtotal": "Subtotal",
+    "@milkshakeOrder_Subtotal": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_OrderTotal": "Order Total",
+    "@milkshakeOrder_OrderTotal": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Tax": "Tax (15%)",
+    "@milkshakeOrder_Tax": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Flavor": "Flavor",
+    "@milkshakeOrder_Flavor": {
+        "description": "Text displayed on the milkshake order screen"
     }
 }
