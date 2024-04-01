@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Ledige restauranter",
   "home_NoRestaurants": "Ingen restauranter er tilgjengelige",
   "home_Restaurant_Opens": "Åpner kl.",
-  "home_Restaurant_Closes": "Stenger kl."
+  "home_Restaurant_Closes": "Stenger kl.",
+  "milkshakeOrder_Restaurants": "Restauranter",
+  "milkshakeOrder_RestaurantName": "Restaurantnavn",
+  "milkshakeOrder_PickFlavor": "Velg smak",
+  "milkshakeOrder_Thickness": "Tykkelse",
+  "milkshakeOrder_Toppings": "Pålegg",
+  "milkshakeOrder_Payment": "Betaling",
+  "milkshakeOrder_Checkout": "Sjekk ut",
+  "milkshakeOrder_TotalAmount": "TOTALBELØP"
 }

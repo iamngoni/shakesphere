@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Saatavilla olevat ravintolat",
   "home_NoRestaurants": "Ei ravintoloita saatavilla",
   "home_Restaurant_Opens": "Aukeaa klo",
-  "home_Restaurant_Closes": "Sulkeutuu klo"
+  "home_Restaurant_Closes": "Sulkeutuu klo",
+  "milkshakeOrder_Restaurants": "Ravintolat",
+  "milkshakeOrder_RestaurantName": "Ravintolan nimi",
+  "milkshakeOrder_PickFlavor": "Valitse maku",
+  "milkshakeOrder_Thickness": "Paksuus",
+  "milkshakeOrder_Toppings": "Lisukkeet",
+  "milkshakeOrder_Payment": "Maksu",
+  "milkshakeOrder_Checkout": "Maksa",
+  "milkshakeOrder_TotalAmount": "KOKONAISSUMMA"
 }

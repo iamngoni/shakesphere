@@ -52,5 +52,13 @@
   "home_AvailableRestaurants": "이용 가능한 식당",
   "home_NoRestaurants": "가용한 식당이 없습니다",
   "home_Restaurant_Opens": "오픈:",
-  "home_Restaurant_Closes": "클로즈:"
+  "home_Restaurant_Closes": "클로즈:",
+  "milkshakeOrder_Restaurants": "레스토랑",
+  "milkshakeOrder_RestaurantName": "레스토랑 이름",
+  "milkshakeOrder_PickFlavor": "맛 선택",
+  "milkshakeOrder_Thickness": "농도",
+  "milkshakeOrder_Toppings": "토핑",
+  "milkshakeOrder_Payment": "결제",
+  "milkshakeOrder_Checkout": "체크아웃",
+  "milkshakeOrder_TotalAmount": "총 금액"
 }

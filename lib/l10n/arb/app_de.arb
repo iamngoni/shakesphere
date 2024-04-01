@@ -52,5 +52,13 @@
   "home_AvailableRestaurants": "Verfügbare Restaurants",
   "home_NoRestaurants": "Keine Restaurants verfügbar",
   "home_Restaurant_Opens": "Öffnet um",
-  "home_Restaurant_Closes": "Schließt um"
+  "home_Restaurant_Closes": "Schließt um",
+  "milkshakeOrder_Restaurants": "Restaurants",
+  "milkshakeOrder_RestaurantName": "Restaurant Name",
+  "milkshakeOrder_PickFlavor": "Geschmacksrichtung auswählen",
+  "milkshakeOrder_Thickness": "Dicke",
+  "milkshakeOrder_Toppings": "Toppings",
+  "milkshakeOrder_Payment": "Zahlung",
+  "milkshakeOrder_Checkout": "Kasse",
+  "milkshakeOrder_TotalAmount": "GESAMTBETRAG"
 }

@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Доступные рестораны",
   "home_NoRestaurants": "Ресторанов нет",
   "home_Restaurant_Opens": "Открывается в",
-  "home_Restaurant_Closes": "Закрывается в"
+  "home_Restaurant_Closes": "Закрывается в",
+  "milkshakeOrder_Restaurants": "Рестораны",
+  "milkshakeOrder_RestaurantName": "Название ресторана",
+  "milkshakeOrder_PickFlavor": "Выбрать вкус",
+  "milkshakeOrder_Thickness": "Густота",
+  "milkshakeOrder_Toppings": "Добавки",
+  "milkshakeOrder_Payment": "Оплата",
+  "milkshakeOrder_Checkout": "Оформить заказ",
+  "milkshakeOrder_TotalAmount": "ОБЩАЯ СУММА"
 }

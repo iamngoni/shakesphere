@@ -211,5 +211,37 @@
     "home_Restaurant_Closes": "Closes at",
     "@home_Restaurant_Closes": {
         "description": "Text displayed on the home screen"
+    },
+    "milkshakeOrder_Restaurants": "Restaurants",
+    "@milkshakeOrder_Restaurants": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_RestaurantName": "Restaurant Name",
+    "@milkshakeOrder_RestaurantName": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_PickFlavor": "Pick Flavor",
+    "@milkshakeOrder_PickFlavor": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Thickness": "Thickness",
+    "@milkshakeOrder_Thickness": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Toppings": "Toppings",
+    "@milkshakeOrder_Toppings": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Payment": "Payment",
+    "@milkshakeOrder_Payment": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Checkout": "Checkout",
+    "@milkshakeOrder_Checkout": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_TotalAmount": "TOTAL AMOUNT",
+    "@milkshakeOrder_TotalAmount": {
+        "description": "Text displayed on the milkshake order screen"
     }
 }

@@ -52,5 +52,13 @@
   "home_AvailableRestaurants": "المطاعم المتاحة",
   "home_NoRestaurants": "لا توجد مطاعم متوفرة",
   "home_Restaurant_Opens": "يفتح في",
-  "home_Restaurant_Closes": "يغلق في"
+  "home_Restaurant_Closes": "يغلق في",
+  "milkshakeOrder_Restaurants": "مطاعم",
+  "milkshakeOrder_RestaurantName": "اسم المطعم",
+  "milkshakeOrder_PickFlavor": "اختر النكهة",
+  "milkshakeOrder_Thickness": "السماكة",
+  "milkshakeOrder_Toppings": "إضافات",
+  "milkshakeOrder_Payment": "الدفع",
+  "milkshakeOrder_Checkout": "إتمام الدفع",
+  "milkshakeOrder_TotalAmount": "المبلغ الإجمالى"
 }

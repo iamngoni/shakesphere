@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "AmaResto Atholayo",
   "home_NoRestaurants": "Akulaw’ esitolo ezitholakalayo",
   "home_Restaurant_Opens": "Ivulakala nge",
-  "home_Restaurant_Closes": "IVALAKALA NGOKU"
+  "home_Restaurant_Closes": "IVALAKALA NGOKU",
+  "milkshakeOrder_Restaurants": "Ezokungena zokudla",
+  "milkshakeOrder_RestaurantName": "Igama lesokungena",
+  "milkshakeOrder_PickFlavor": "Khetha indlela",
+  "milkshakeOrder_Thickness": "Ubunzima",
+  "milkshakeOrder_Toppings": "Izinongo",
+  "milkshakeOrder_Payment": "Ukukhokha",
+  "milkshakeOrder_Checkout": "Ukukhokha",
+  "milkshakeOrder_TotalAmount": "INANI ESIPHELELE"
 }

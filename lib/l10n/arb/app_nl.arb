@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Beschikbare restaurants",
   "home_NoRestaurants": "Geen restaurants beschikbaar",
   "home_Restaurant_Opens": "Open om",
-  "home_Restaurant_Closes": "Sluit om"
+  "home_Restaurant_Closes": "Sluit om",
+  "milkshakeOrder_Restaurants": "Restaurants",
+  "milkshakeOrder_RestaurantName": "Restaurantnaam",
+  "milkshakeOrder_PickFlavor": "Kies smaak",
+  "milkshakeOrder_Thickness": "Dikte",
+  "milkshakeOrder_Toppings": "Toppings",
+  "milkshakeOrder_Payment": "Betaling",
+  "milkshakeOrder_Checkout": "Afrekenen",
+  "milkshakeOrder_TotalAmount": "TOTAALBEDRAG"
 }

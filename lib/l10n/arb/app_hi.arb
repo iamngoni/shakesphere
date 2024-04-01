@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "उपलब्ध रेस्टोरेंट",
   "home_NoRestaurants": "कोई रेस्टोरेंट उपलब्ध नहीं है",
   "home_Restaurant_Opens": "खुलने का समय",
-  "home_Restaurant_Closes": "बंद होने का समय"
+  "home_Restaurant_Closes": "बंद होने का समय",
+  "milkshakeOrder_Restaurants": "रेस्तराँ",
+  "milkshakeOrder_RestaurantName": "रेस्तराँ का नाम",
+  "milkshakeOrder_PickFlavor": "फ़्लेवर चुनें",
+  "milkshakeOrder_Thickness": "मोटाई",
+  "milkshakeOrder_Toppings": "टॉपिंग",
+  "milkshakeOrder_Payment": "भुगतान",
+  "milkshakeOrder_Checkout": "चेकआउट",
+  "milkshakeOrder_TotalAmount": "कुल राशि"
 }

@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Διαθέσιμα εστιατόρια",
   "home_NoRestaurants": "Δεν υπάρχουν διαθέσιμα εστιατόρια",
   "home_Restaurant_Opens": "Ανοίγει στις",
-  "home_Restaurant_Closes": "Κλείνει στις"
+  "home_Restaurant_Closes": "Κλείνει στις",
+  "milkshakeOrder_Restaurants": "Εστιατόρια",
+  "milkshakeOrder_RestaurantName": "Όνομα εστιατορίου",
+  "milkshakeOrder_PickFlavor": "Επιλέξτε γεύση",
+  "milkshakeOrder_Thickness": "Πάχος",
+  "milkshakeOrder_Toppings": "Συνοδευτικά",
+  "milkshakeOrder_Payment": "Πληρωμή",
+  "milkshakeOrder_Checkout": "Πληρωμή",
+  "milkshakeOrder_TotalAmount": "ΣΥΝΟΛΙΚΟ ΠΟΣΟ"
 }

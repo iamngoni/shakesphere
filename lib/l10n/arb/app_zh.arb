@@ -52,5 +52,13 @@
   "home_AvailableRestaurants": "可用店铺",
   "home_NoRestaurants": "没有可用餐厅",
   "home_Restaurant_Opens": "营业于",
-  "home_Restaurant_Closes": "歇业于"
+  "home_Restaurant_Closes": "歇业于",
+  "milkshakeOrder_Restaurants": "餐馆",
+  "milkshakeOrder_RestaurantName": "餐馆名称",
+  "milkshakeOrder_PickFlavor": "选择口味",
+  "milkshakeOrder_Thickness": "浓稠度",
+  "milkshakeOrder_Toppings": "浇头",
+  "milkshakeOrder_Payment": "付款",
+  "milkshakeOrder_Checkout": "结算",
+  "milkshakeOrder_TotalAmount": "金额合计"
 }

@@ -72,6 +72,16 @@ class _ToastsOverlayState extends State<ToastsOverlay>
             decoration: BoxDecoration(
               color: widget.backgroundColor,
               borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                color: AppColors.white.withOpacity(0.5),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.white.withOpacity(0.2),
+                  blurRadius: 10,
+                  spreadRadius: 2,
+                ),
+              ],
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,

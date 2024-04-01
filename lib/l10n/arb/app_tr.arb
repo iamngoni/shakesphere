@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Mevcut Restoranlar",
   "home_NoRestaurants": "No restaurants available",
   "home_Restaurant_Opens": "Saatinde açılıyor",
-  "home_Restaurant_Closes": "Saatinde kapanıyor"
+  "home_Restaurant_Closes": "Saatinde kapanıyor",
+  "milkshakeOrder_Restaurants": "Restoranlar",
+  "milkshakeOrder_RestaurantName": "Restoran Adı",
+  "milkshakeOrder_PickFlavor": "Lezzet Seçin",
+  "milkshakeOrder_Thickness": "Koyu",
+  "milkshakeOrder_Toppings": "Sos",
+  "milkshakeOrder_Payment": "Ödeme",
+  "milkshakeOrder_Checkout": "Ödeme",
+  "milkshakeOrder_TotalAmount": "TOPLAM TUTAR"
 }

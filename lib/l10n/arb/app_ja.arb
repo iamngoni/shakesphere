@@ -52,5 +52,13 @@
   "home_AvailableRestaurants": "利用可能なレストラン",
   "home_NoRestaurants": "利用可能なレストランがありません",
   "home_Restaurant_Opens": "オープン時刻",
-  "home_Restaurant_Closes": "閉店時刻"
+  "home_Restaurant_Closes": "閉店時刻",
+  "milkshakeOrder_Restaurants": "レストラン",
+  "milkshakeOrder_RestaurantName": "Restaurant Name",
+  "milkshakeOrder_PickFlavor": "フレイバーを選択",
+  "milkshakeOrder_Thickness": "濃さ",
+  "milkshakeOrder_Toppings": "トッピング",
+  "milkshakeOrder_Payment": "支払方法",
+  "milkshakeOrder_Checkout": "チェックアウト",
+  "milkshakeOrder_TotalAmount": "合計金額"
 }

@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Restauranger i närheten",
   "home_NoRestaurants": "Det finns inga restauranger att visa",
   "home_Restaurant_Opens": "Öppnar",
-  "home_Restaurant_Closes": "Stänger"
+  "home_Restaurant_Closes": "Stänger",
+  "milkshakeOrder_Restaurants": "Restauranger",
+  "milkshakeOrder_RestaurantName": "Restaurangnamn",
+  "milkshakeOrder_PickFlavor": "Välj smak",
+  "milkshakeOrder_Thickness": "Tjocklek",
+  "milkshakeOrder_Toppings": "Topping",
+  "milkshakeOrder_Payment": "Betalning",
+  "milkshakeOrder_Checkout": "Kassa",
+  "milkshakeOrder_TotalAmount": "TOTALSUMMA"
 }

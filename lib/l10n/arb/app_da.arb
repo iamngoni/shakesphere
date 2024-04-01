@@ -51,5 +51,13 @@
   "home_AvailableRestaurants": "Tilgængelige restauranter",
   "home_NoRestaurants": "Ingen restauranter tilgængelige",
   "home_Restaurant_Opens": "Åbner kl.",
-  "home_Restaurant_Closes": "Lukker kl."
+  "home_Restaurant_Closes": "Lukker kl.",
+  "milkshakeOrder_Restaurants": "Restauranter",
+  "milkshakeOrder_RestaurantName": "Restaurantnavn",
+  "milkshakeOrder_PickFlavor": "Vælg smag",
+  "milkshakeOrder_Thickness": "Tykkelse",
+  "milkshakeOrder_Toppings": "Toppings",
+  "milkshakeOrder_Payment": "Betaling",
+  "milkshakeOrder_Checkout": "Betaling",
+  "milkshakeOrder_TotalAmount": "TOTALBELØB"
 }

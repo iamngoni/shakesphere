@@ -6,11 +6,11 @@
 //  Copyright (c) 2024 ModestNerds, Co
 //
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:handy_extensions/handy_extensions.dart';
 import 'package:relative_scale/relative_scale.dart';
+import 'package:shakesphere/milkshake/views/widgets/restaurant_list_tile.dart';
 
 import '../../../l10n/l10n.dart';
 import '../../../shared/configs/colors.dart';
@@ -60,71 +60,7 @@ class RestaurantsListView extends StatelessWidget {
                         itemCount: state.restaurants.length,
                         itemBuilder: (context, index) {
                           final restaurant = state.restaurants[index];
-                          return ListTile(
-                            contentPadding: EdgeInsets.zero,
-                            title: Text(
-                              restaurant.name,
-                              style: TextStyle(
-                                color: AppColors.blue,
-                                fontWeight: FontWeight.w700,
-                                fontSize: sy(9),
-                              ),
-                            ),
-                            subtitle: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  restaurant.address,
-                                  style: TextStyle(
-                                    color: AppColors.blue.withOpacity(0.8),
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: sy(8),
-                                  ),
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      '${context.l10n.home_Restaurant_Opens} ',
-                                      style: TextStyle(
-                                        color: AppColors.blue.withOpacity(0.8),
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: sy(8),
-                                      ),
-                                    ),
-                                    Text(
-                                      restaurant.startTimeOfDay.format(context),
-                                      style: TextStyle(
-                                        color: AppColors.blue,
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: sy(8),
-                                      ),
-                                    ),
-                                    Text(
-                                      ' ${context.l10n.home_Restaurant_Closes} ',
-                                      style: TextStyle(
-                                        color: AppColors.blue.withOpacity(0.8),
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: sy(8),
-                                      ),
-                                    ),
-                                    Text(
-                                      restaurant.endTimeOfDay.format(context),
-                                      style: TextStyle(
-                                        color: AppColors.blue,
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: sy(8),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            trailing: Icon(
-                              CupertinoIcons.arrow_right,
-                              color: AppColors.blue,
-                              size: sy(12),
-                            ),
-                          );
+                          return RestaurantListTile(restaurant: restaurant);
                         },
                         separatorBuilder: (BuildContext context, _) {
                           return const Divider(
