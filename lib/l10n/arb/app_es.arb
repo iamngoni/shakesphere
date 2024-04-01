@@ -60,5 +60,13 @@
   "milkshakeOrder_Toppings": "Aderezos",
   "milkshakeOrder_Payment": "Pago",
   "milkshakeOrder_Checkout": "Realizar pedido",
-  "milkshakeOrder_TotalAmount": "IMPORTE TOTAL"
+  "milkshakeOrder_TotalAmount": "IMPORTE TOTAL",
+  "milkshakeOrder_SelectPaymentMethod": "Seleccionar método de pago",
+  "milkshakeOrder_SelectPickupTime": "Hora de recogida",
+  "milkshakeOrder_TimeError": "Selecciona una hora de recogida válida",
+  "milkshakeOrder_OrderSummary": "Resumen del pedido",
+  "milkshakeOrder_Subtotal": "Subtotal",
+  "milkshakeOrder_OrderTotal": "Total del pedido",
+  "milkshakeOrder_Tax": "Impuesto (15%)",
+  "milkshakeOrder_Flavor": "Sabor"
 }

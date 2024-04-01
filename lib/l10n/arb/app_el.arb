@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Συνοδευτικά",
   "milkshakeOrder_Payment": "Πληρωμή",
   "milkshakeOrder_Checkout": "Πληρωμή",
-  "milkshakeOrder_TotalAmount": "ΣΥΝΟΛΙΚΟ ΠΟΣΟ"
+  "milkshakeOrder_TotalAmount": "ΣΥΝΟΛΙΚΟ ΠΟΣΟ",
+  "milkshakeOrder_SelectPaymentMethod": "Επιλέξτε τρόπο πληρωμής",
+  "milkshakeOrder_SelectPickupTime": "Ώρα παραλαβής",
+  "milkshakeOrder_TimeError": "Επιλέξτε μια έγκυρη ώρα παραλαβής",
+  "milkshakeOrder_OrderSummary": "Σύνοψη παραγγελίας",
+  "milkshakeOrder_Subtotal": "Μερικό σύνολο",
+  "milkshakeOrder_OrderTotal": "Συνολικό ποσό παραγγελίας",
+  "milkshakeOrder_Tax": "Φόρος (15%)",
+  "milkshakeOrder_Flavor": "Γεύση"
 }

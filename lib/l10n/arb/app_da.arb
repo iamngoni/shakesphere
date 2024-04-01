@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Toppings",
   "milkshakeOrder_Payment": "Betaling",
   "milkshakeOrder_Checkout": "Betaling",
-  "milkshakeOrder_TotalAmount": "TOTALBELØB"
+  "milkshakeOrder_TotalAmount": "TOTALBELØB",
+  "milkshakeOrder_SelectPaymentMethod": "Vælg betalingsmetode",
+  "milkshakeOrder_SelectPickupTime": "Afhentningstidspunkt",
+  "milkshakeOrder_TimeError": "Vælg venligst et gyldigt afhentningstidspunkt",
+  "milkshakeOrder_OrderSummary": "Bestillingsresumé",
+  "milkshakeOrder_Subtotal": "Subtotal",
+  "milkshakeOrder_OrderTotal": "Samlet bestilling",
+  "milkshakeOrder_Tax": "Skat (15 %)",
+  "milkshakeOrder_Flavor": "Smag"
 }

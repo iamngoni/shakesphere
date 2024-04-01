@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Sos",
   "milkshakeOrder_Payment": "Ödeme",
   "milkshakeOrder_Checkout": "Ödeme",
-  "milkshakeOrder_TotalAmount": "TOPLAM TUTAR"
+  "milkshakeOrder_TotalAmount": "TOPLAM TUTAR",
+  "milkshakeOrder_SelectPaymentMethod": "Ödeme Yöntemini Seçin",
+  "milkshakeOrder_SelectPickupTime": "Teslim Alma Saati",
+  "milkshakeOrder_TimeError": "Lütfen geçerli bir teslim alma saati seçin",
+  "milkshakeOrder_OrderSummary": "Sipariş Özeti",
+  "milkshakeOrder_Subtotal": "Ara Toplam",
+  "milkshakeOrder_OrderTotal": "Toplam Tutar",
+  "milkshakeOrder_Tax": "Vergi (15%)",
+  "milkshakeOrder_Flavor": "Lezzet"
 }

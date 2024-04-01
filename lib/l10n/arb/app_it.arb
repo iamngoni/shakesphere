@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Topping",
   "milkshakeOrder_Payment": "Pagamento",
   "milkshakeOrder_Checkout": "Vai al checkout",
-  "milkshakeOrder_TotalAmount": "TOTALE"
+  "milkshakeOrder_TotalAmount": "TOTALE",
+  "milkshakeOrder_SelectPaymentMethod": "Seleziona il metodo di pagamento",
+  "milkshakeOrder_SelectPickupTime": "Orario di ritiro",
+  "milkshakeOrder_TimeError": "Seleziona un orario di ritiro valido",
+  "milkshakeOrder_OrderSummary": "Riepilogo ordine",
+  "milkshakeOrder_Subtotal": "Subtotale",
+  "milkshakeOrder_OrderTotal": "Totale ordine",
+  "milkshakeOrder_Tax": "Tasse (15%)",
+  "milkshakeOrder_Flavor": "Gusto"
 }

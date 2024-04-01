@@ -60,5 +60,13 @@
   "milkshakeOrder_Toppings": "إضافات",
   "milkshakeOrder_Payment": "الدفع",
   "milkshakeOrder_Checkout": "إتمام الدفع",
-  "milkshakeOrder_TotalAmount": "المبلغ الإجمالى"
+  "milkshakeOrder_TotalAmount": "المبلغ الإجمالى",
+  "milkshakeOrder_SelectPaymentMethod": "حدد طريقة الدفع",
+  "milkshakeOrder_SelectPickupTime": "وقت الاستلام",
+  "milkshakeOrder_TimeError": "الرجاء اختيار وقت استلام صالح",
+  "milkshakeOrder_OrderSummary": "ملخص الطلب",
+  "milkshakeOrder_Subtotal": "الإجمالي الفرعي",
+  "milkshakeOrder_OrderTotal": "إجمالي الطلب",
+  "milkshakeOrder_Tax": "الضريبة (15%)",
+  "milkshakeOrder_Flavor": "النكهة"
 }

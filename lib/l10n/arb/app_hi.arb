@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "टॉपिंग",
   "milkshakeOrder_Payment": "भुगतान",
   "milkshakeOrder_Checkout": "चेकआउट",
-  "milkshakeOrder_TotalAmount": "कुल राशि"
+  "milkshakeOrder_TotalAmount": "कुल राशि",
+  "milkshakeOrder_SelectPaymentMethod": "भुगतान विधि चुनें",
+  "milkshakeOrder_SelectPickupTime": "पिकअप समय",
+  "milkshakeOrder_TimeError": "कृपया वैध पिकअप समय चुनें",
+  "milkshakeOrder_OrderSummary": "ऑर्डर सारांश",
+  "milkshakeOrder_Subtotal": "उपयोग",
+  "milkshakeOrder_OrderTotal": "ऑर्डर कुल",
+  "milkshakeOrder_Tax": "कर (15%)",
+  "milkshakeOrder_Flavor": "स्वाद"
 }

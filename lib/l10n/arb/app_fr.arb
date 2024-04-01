@@ -60,5 +60,13 @@
   "milkshakeOrder_Toppings": "Garnitures",
   "milkshakeOrder_Payment": "Paiement",
   "milkshakeOrder_Checkout": "Passer la commande",
-  "milkshakeOrder_TotalAmount": "MONTANT TOTAL"
+  "milkshakeOrder_TotalAmount": "MONTANT TOTAL",
+  "milkshakeOrder_SelectPaymentMethod": "Sélectionner un mode de paiement",
+  "milkshakeOrder_SelectPickupTime": "Heure d'enlèvement",
+  "milkshakeOrder_TimeError": "Veuillez sélectionner une heure d'enlèvement valide",
+  "milkshakeOrder_OrderSummary": "Résumé de la commande",
+  "milkshakeOrder_Subtotal": "Sous-total",
+  "milkshakeOrder_OrderTotal": "Total de la commande",
+  "milkshakeOrder_Tax": "Taxe (15 %)",
+  "milkshakeOrder_Flavor": "Parfum"
 }

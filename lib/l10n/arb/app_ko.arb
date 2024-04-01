@@ -60,5 +60,13 @@
   "milkshakeOrder_Toppings": "토핑",
   "milkshakeOrder_Payment": "결제",
   "milkshakeOrder_Checkout": "체크아웃",
-  "milkshakeOrder_TotalAmount": "총 금액"
+  "milkshakeOrder_TotalAmount": "총 금액",
+  "milkshakeOrder_SelectPaymentMethod": "결제 수단 선택",
+  "milkshakeOrder_SelectPickupTime": "픽업 시간",
+  "milkshakeOrder_TimeError": "유효한 픽업 시간을 선택하세요",
+  "milkshakeOrder_OrderSummary": "주문 요약",
+  "milkshakeOrder_Subtotal": "소계",
+  "milkshakeOrder_OrderTotal": "주문 총액",
+  "milkshakeOrder_Tax": "세금(15%)",
+  "milkshakeOrder_Flavor": "맛"
 }

@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Pålegg",
   "milkshakeOrder_Payment": "Betaling",
   "milkshakeOrder_Checkout": "Sjekk ut",
-  "milkshakeOrder_TotalAmount": "TOTALBELØP"
+  "milkshakeOrder_TotalAmount": "TOTALBELØP",
+  "milkshakeOrder_SelectPaymentMethod": "Velg betalingsmåte",
+  "milkshakeOrder_SelectPickupTime": "Hentetid",
+  "milkshakeOrder_TimeError": "Velg et gyldig hentetidspunkt",
+  "milkshakeOrder_OrderSummary": "Bestillingssammendrag",
+  "milkshakeOrder_Subtotal": "Delsum",
+  "milkshakeOrder_OrderTotal": "Totalsum for bestilling",
+  "milkshakeOrder_Tax": "Moms (15 %)",
+  "milkshakeOrder_Flavor": "Smak"
 }

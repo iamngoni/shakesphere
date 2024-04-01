@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Toppings",
   "milkshakeOrder_Payment": "Betaling",
   "milkshakeOrder_Checkout": "Afrekenen",
-  "milkshakeOrder_TotalAmount": "TOTAALBEDRAG"
+  "milkshakeOrder_TotalAmount": "TOTAALBEDRAG",
+  "milkshakeOrder_SelectPaymentMethod": "Pilih metode pembayaran",
+  "milkshakeOrder_SelectPickupTime": "Waktu pengambilan",
+  "milkshakeOrder_TimeError": "Silakan pilih waktu pengambilan yang valid",
+  "milkshakeOrder_OrderSummary": "Ringkasan pesanan",
+  "milkshakeOrder_Subtotal": "Subtotal",
+  "milkshakeOrder_OrderTotal": "Total pesanan",
+  "milkshakeOrder_Tax": "Pajak (15%)",
+  "milkshakeOrder_Flavor": "Rasa"
 }

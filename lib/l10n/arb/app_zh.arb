@@ -60,5 +60,13 @@
   "milkshakeOrder_Toppings": "浇头",
   "milkshakeOrder_Payment": "付款",
   "milkshakeOrder_Checkout": "结算",
-  "milkshakeOrder_TotalAmount": "金额合计"
+  "milkshakeOrder_TotalAmount": "金额合计",
+  "milkshakeOrder_SelectPaymentMethod": "选择付款方式",
+  "milkshakeOrder_SelectPickupTime": "提货时间",
+  "milkshakeOrder_TimeError": "请选择有效的提货时间",
+  "milkshakeOrder_OrderSummary": "订单摘要",
+  "milkshakeOrder_Subtotal": "小计",
+  "milkshakeOrder_OrderTotal": "订单总计",
+  "milkshakeOrder_Tax": "税（15%）",
+  "milkshakeOrder_Flavor": "口味"
 }

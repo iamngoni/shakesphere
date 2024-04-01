@@ -60,5 +60,13 @@
   "milkshakeOrder_Toppings": "Toppings",
   "milkshakeOrder_Payment": "Zahlung",
   "milkshakeOrder_Checkout": "Kasse",
-  "milkshakeOrder_TotalAmount": "GESAMTBETRAG"
+  "milkshakeOrder_TotalAmount": "GESAMTBETRAG",
+  "milkshakeOrder_SelectPaymentMethod": "Zahlungsart auswählen",
+  "milkshakeOrder_SelectPickupTime": "Abholzeit",
+  "milkshakeOrder_TimeError": "Bitte wähle eine gültige Abholzeit.",
+  "milkshakeOrder_OrderSummary": "Bestellzusammenfassung",
+  "milkshakeOrder_Subtotal": "Zwischensumme",
+  "milkshakeOrder_OrderTotal": "Gesamtbetrag",
+  "milkshakeOrder_Tax": "Steuer (15 %)",
+  "milkshakeOrder_Flavor": "Geschmacksrichtung"
 }

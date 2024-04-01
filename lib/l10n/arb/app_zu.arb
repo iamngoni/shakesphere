@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Izinongo",
   "milkshakeOrder_Payment": "Ukukhokha",
   "milkshakeOrder_Checkout": "Ukukhokha",
-  "milkshakeOrder_TotalAmount": "INANI ESIPHELELE"
+  "milkshakeOrder_TotalAmount": "INANI ESIPHELELE",
+  "milkshakeOrder_SelectPaymentMethod": "Khetha Indlela Yokukhokha",
+  "milkshakeOrder_SelectPickupTime": "Isikhathi sokuthatha",
+  "milkshakeOrder_TimeError": "Sicela ukhethe isikhathi esifanelekile sokuthatha",
+  "milkshakeOrder_OrderSummary": "Isifinyezwa Soku-oda",
+  "milkshakeOrder_Subtotal": "Isamba Esigcwele",
+  "milkshakeOrder_OrderTotal": "Isamba Esigcwele Soku-oda",
+  "milkshakeOrder_Tax": "Intela (15%)",
+  "milkshakeOrder_Flavor": "Incasa"
 }

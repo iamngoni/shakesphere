@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Lisukkeet",
   "milkshakeOrder_Payment": "Maksu",
   "milkshakeOrder_Checkout": "Maksa",
-  "milkshakeOrder_TotalAmount": "KOKONAISSUMMA"
+  "milkshakeOrder_TotalAmount": "KOKONAISSUMMA",
+  "milkshakeOrder_SelectPaymentMethod": "Valitse maksutapa",
+  "milkshakeOrder_SelectPickupTime": "Noutoaika",
+  "milkshakeOrder_TimeError": "Valitse hyväksyttävä noutoaika",
+  "milkshakeOrder_OrderSummary": "Tilauksen yhteenveto",
+  "milkshakeOrder_Subtotal": "Välilasku",
+  "milkshakeOrder_OrderTotal": "Tilauksen loppusumma",
+  "milkshakeOrder_Tax": "Vero (15 %)",
+  "milkshakeOrder_Flavor": "Makuaine"
 }

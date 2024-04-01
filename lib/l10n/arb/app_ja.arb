@@ -60,5 +60,13 @@
   "milkshakeOrder_Toppings": "トッピング",
   "milkshakeOrder_Payment": "支払方法",
   "milkshakeOrder_Checkout": "チェックアウト",
-  "milkshakeOrder_TotalAmount": "合計金額"
+  "milkshakeOrder_TotalAmount": "合計金額",
+  "milkshakeOrder_SelectPaymentMethod": "お支払方法の選択",
+  "milkshakeOrder_SelectPickupTime": "受け取り時間",
+  "milkshakeOrder_TimeError": "有効な受け取り時間を選択してください",
+  "milkshakeOrder_OrderSummary": "注文の概要",
+  "milkshakeOrder_Subtotal": "小計",
+  "milkshakeOrder_OrderTotal": "注文の合計",
+  "milkshakeOrder_Tax": "税 (15%)",
+  "milkshakeOrder_Flavor": "フレーバー"
 }

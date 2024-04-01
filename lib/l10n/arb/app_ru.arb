@@ -59,5 +59,13 @@
   "milkshakeOrder_Toppings": "Добавки",
   "milkshakeOrder_Payment": "Оплата",
   "milkshakeOrder_Checkout": "Оформить заказ",
-  "milkshakeOrder_TotalAmount": "ОБЩАЯ СУММА"
+  "milkshakeOrder_TotalAmount": "ОБЩАЯ СУММА",
+  "milkshakeOrder_SelectPaymentMethod": "Выберите способ оплаты",
+  "milkshakeOrder_SelectPickupTime": "Время получения",
+  "milkshakeOrder_TimeError": "Выберите действительное время получения",
+  "milkshakeOrder_OrderSummary": "Сводка заказа",
+  "milkshakeOrder_Subtotal": "Промежуточный итог",
+  "milkshakeOrder_OrderTotal": "Общая сумма заказа",
+  "milkshakeOrder_Tax": "Налог (15%)",
+  "milkshakeOrder_Flavor": "Вкус"
 }
