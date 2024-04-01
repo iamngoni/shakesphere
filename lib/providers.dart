@@ -11,6 +11,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'auth/state/auth/auth_bloc.dart';
 import 'injection.dart';
 import 'milkshake/state/configs/configs_bloc.dart';
+import 'milkshake/state/restaurants/restaurants_bloc.dart';
+import 'milkshake/state/user/user_bloc.dart';
 import 'shared/state/connectivity_status/connectivity_status_bloc.dart';
 import 'shared/state/locale/locale_bloc.dart';
 
@@ -26,5 +28,11 @@ List<BlocProvider> providers = [
   ),
   BlocProvider<ConfigsBloc>(
     create: (_) => getIt<ConfigsBloc>()..add(const GetConfigsEvent()),
+  ),
+  BlocProvider<UserBloc>(
+    create: (_) => getIt<UserBloc>()..add(const GetUserDetailsEvent()),
+  ),
+  BlocProvider<RestaurantsBloc>(
+    create: (_) => getIt<RestaurantsBloc>()..add(const GetRestaurantsEvent()),
   ),
 ];

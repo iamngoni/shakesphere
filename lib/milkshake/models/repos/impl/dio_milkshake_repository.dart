@@ -99,7 +99,7 @@ class DioMilkshakeRepository implements MilkshakeRepository {
   Future<Either<ApplicationError, List<Restaurant>>> getRestaurants() async {
     try {
       final Response<ApiResponse> response = await dio.get(
-        '/milkshakes/configs',
+        '/milkshakes/restaurants',
       );
 
       final ApiResponse apiResponse = response.data!;

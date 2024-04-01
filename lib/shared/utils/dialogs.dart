@@ -7,8 +7,10 @@
 //
 
 import 'package:flutter/material.dart';
+import 'package:handy_extensions/handy_extensions.dart';
 import 'package:relative_scale/relative_scale.dart';
 
+import '../../l10n/l10n.dart';
 import '../configs/colors.dart';
 import '../extensions/context.dart';
 import '../widgets/sj_sensitive_text_field.dart';
@@ -20,19 +22,152 @@ Future<bool?> showConfirmActionDialog(
 }) {
   return showDialog<bool>(
     context: context,
-    builder: (context) => AlertDialog(
-      title: title != null ? Text(title) : null,
-      content: Text(message),
-      actions: [
-        TextButton(
-          onPressed: () => context.goBack(value: false),
-          child: const Text('No'),
-        ),
-        TextButton(
-          onPressed: () => context.goBack(value: true),
-          child: const Text('Yes'),
-        ),
-      ],
+    barrierColor: AppColors.white.withOpacity(0.5),
+    builder: (context) => RelativeBuilder(
+      builder: (context, height, width, sy, sx) {
+        return Dialog(
+          insetPadding: EdgeInsets.symmetric(horizontal: sx(10)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Container(
+            height: sy(100),
+            width: context.width,
+            padding: EdgeInsets.symmetric(
+              horizontal: sx(10),
+              vertical: sy(5),
+            ),
+            decoration: BoxDecoration(
+              color: AppColors.blue,
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.blue.withOpacity(0.2),
+                  blurRadius: 10,
+                  offset: const Offset(5, 5),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      height: sy(12),
+                      width: sy(12),
+                    ),
+                    Text(
+                      title ?? 'Confirm Action',
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: sy(10),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () => context.goBack(value: false),
+                      child: SizedBox(
+                        height: sy(12),
+                        width: sy(12),
+                        child: Stack(
+                          children: [
+                            CircularProgressIndicator(
+                              value: 0,
+                              backgroundColor: AppColors.white,
+                              valueColor: const AlwaysStoppedAnimation<Color>(
+                                AppColors.white,
+                              ),
+                              strokeCap: StrokeCap.round,
+                              strokeWidth: sx(1),
+                            ),
+                            Center(
+                              child: Icon(
+                                Icons.close,
+                                color: AppColors.white,
+                                size: sy(10),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const Divider(),
+                Expanded(
+                  child: Center(
+                    child: Text(
+                      message,
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontWeight: FontWeight.w400,
+                        fontSize: sy(9),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: sy(10),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        context.goBack(value: true);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: sx(15),
+                          vertical: sy(2),
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Text(
+                          context.l10n.dialog_Yes,
+                          style: TextStyle(
+                            color: AppColors.blue,
+                            fontWeight: FontWeight.w700,
+                            fontSize: sy(9),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: sx(20),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        context.goBack(value: false);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: sx(15),
+                          vertical: sy(2),
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColors.yellow,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Text(
+                          context.l10n.dialog_No,
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontWeight: FontWeight.w700,
+                            fontSize: sy(9),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     ),
   );
 }

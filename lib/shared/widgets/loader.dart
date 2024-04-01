@@ -17,7 +17,7 @@ import '../configs/colors.dart';
 class LoaderWidget extends StatelessWidget {
   const LoaderWidget({
     this.color = AppColors.blue,
-    this.size = 15,
+    this.size = 20,
     super.key,
   });
 

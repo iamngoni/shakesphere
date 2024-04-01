@@ -21,6 +21,7 @@ class AppColors {
   static const Color red = Color(0xFFEE0F0F);
   static const Color border = Color(0xFF9BABB9);
   static const Color green = Color(0xFF117908);
+  static const Color yellow = Color(0xFFE8C11C);
 
   static const MaterialColor materialBlue = MaterialColor(0xFF123959, {
     50: Color(0xFFE6EBF0),

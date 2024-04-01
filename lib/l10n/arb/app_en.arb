@@ -167,5 +167,33 @@
     "signIn_forgotYourPasswordBtnTitle": "Forgot your password?",
     "@signIn_forgotYourPasswordBtnTitle": {
         "description": "Title of the forgot your password button displayed on the sign in screen"
+    },
+    "home_UpdateProfileBtnTitle": "Update",
+    "@home_UpdateProfileBtnTitle": {
+        "description": "Title of the update profile button displayed on the home screen"
+    },
+    "home_SignOutBtnTitle": "Sign out",
+    "@home_SignOutBtnTitle": {
+        "description": "Title of the sign out button displayed on the home screen"
+    },
+    "home_SignOutDialogTitle": "Sign out",
+    "@home_SignOutDialogTitle": {
+        "description": "Title of the sign out dialog displayed on the home screen"
+    },
+    "home_SignOutDialogMessage": "Are you sure you want to sign out?",
+    "@home_SignOutDialogMessage": {
+        "description": "Message displayed on the sign out dialog"
+    },
+    "dialog_Yes": "Continue",
+    "@dialog_Yes": {
+        "description": "Title of the yes button displayed on the dialog"
+    },
+    "dialog_No": "Dismiss",
+    "@dialog_No": {
+        "description": "Title of the no button displayed on the dialog"
+    },
+    "home_Welcome": "Welcome",
+    "@home_Welcome": {
+        "description": "Text displayed on the home screen"
     }
 }
