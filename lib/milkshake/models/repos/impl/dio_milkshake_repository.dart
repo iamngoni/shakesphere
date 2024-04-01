@@ -9,19 +9,21 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:dartz/dartz.dart';
+import 'package:dartz/dartz.dart' hide Order;
 import 'package:dio/dio.dart';
-import 'package:injectable/injectable.dart';
+import 'package:injectable/injectable.dart' hide Order;
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 import '../../../../shared/models/api_response.dart';
 import '../../../../shared/models/application_error.dart';
 import '../../../../shared/utils/dio_error_to_application_error.dart';
 import '../../data/flavor.dart';
+import '../../data/order.dart';
 import '../../data/restaurant.dart';
 import '../../data/thickness.dart';
 import '../../data/topping.dart';
 import '../../data/user.dart';
+import '../../dtos/order_dto.dart';
 import '../abs/milkshake_repository.dart';
 
 @LazySingleton(as: MilkshakeRepository)
@@ -109,6 +111,64 @@ class DioMilkshakeRepository implements MilkshakeRepository {
             .map((dynamic e) => Restaurant.fromJson(e as Map<String, dynamic>))
             .toList();
         return Right(restaurants);
+      } else {
+        return Left(
+          ApplicationError(apiResponse.message ?? 'An error occurred'),
+        );
+      }
+    } on DioException catch (e, s) {
+      log(e.toString(), error: e, stackTrace: s);
+      unawaited(Sentry.captureException(e, stackTrace: s));
+      return Left(dioErrorToApplicationError(e));
+    } catch (e, s) {
+      log(e.toString(), error: e, stackTrace: s);
+      unawaited(Sentry.captureException(e, stackTrace: s));
+      return left(ApplicationError.unknownError());
+    }
+  }
+
+  @override
+  Future<Either<ApplicationError, List<Order>>> getOrders() async {
+    try {
+      final Response<ApiResponse> response = await dio.get(
+        '/milkshakes/orders',
+      );
+
+      final ApiResponse apiResponse = response.data!;
+      if (apiResponse.status) {
+        final List<Order> orders = (apiResponse.data!['orders'] as List)
+            .map((dynamic e) => Order.fromJson(e as Map<String, dynamic>))
+            .toList();
+        return Right(orders);
+      } else {
+        return Left(
+          ApplicationError(apiResponse.message ?? 'An error occurred'),
+        );
+      }
+    } on DioException catch (e, s) {
+      log(e.toString(), error: e, stackTrace: s);
+      unawaited(Sentry.captureException(e, stackTrace: s));
+      return Left(dioErrorToApplicationError(e));
+    } catch (e, s) {
+      log(e.toString(), error: e, stackTrace: s);
+      unawaited(Sentry.captureException(e, stackTrace: s));
+      return left(ApplicationError.unknownError());
+    }
+  }
+
+  @override
+  Future<Either<ApplicationError, Order>> placeOrder(OrderDTO dto) async {
+    try {
+      final Response<ApiResponse> response = await dio.post(
+        '/milkshakes/orders',
+        data: dto.toJson(),
+      );
+
+      final ApiResponse apiResponse = response.data!;
+      if (apiResponse.status) {
+        final Order order =
+            Order.fromJson(apiResponse.data!['order'] as Map<String, dynamic>);
+        return Right(order);
       } else {
         return Left(
           ApplicationError(apiResponse.message ?? 'An error occurred'),

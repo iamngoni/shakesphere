@@ -22,6 +22,7 @@ import 'package:shakesphere/milkshake/models/repos/impl/dio_milkshake_repository
 import 'package:shakesphere/milkshake/state/configs/configs_bloc.dart' as _i16;
 import 'package:shakesphere/milkshake/state/milkshake_order/milkshake_order_bloc.dart'
     as _i5;
+import 'package:shakesphere/milkshake/state/orders/orders_bloc.dart' as _i19;
 import 'package:shakesphere/milkshake/state/restaurants/restaurants_bloc.dart'
     as _i17;
 import 'package:shakesphere/milkshake/state/user/user_bloc.dart' as _i18;
@@ -65,6 +66,8 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i17.RestaurantsBloc(repository: gh<_i13.MilkshakeRepository>()));
     gh.factory<_i18.UserBloc>(
         () => _i18.UserBloc(repository: gh<_i13.MilkshakeRepository>()));
+    gh.factory<_i19.OrdersBloc>(
+        () => _i19.OrdersBloc(repository: gh<_i13.MilkshakeRepository>()));
     return this;
   }
 }
