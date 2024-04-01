@@ -14,6 +14,7 @@ class SwitchLocale extends LocaleEvent {
 }
 
 class LoadLocale extends LocaleEvent {
+  const LoadLocale();
   @override
   List<Object?> get props => [];
 }

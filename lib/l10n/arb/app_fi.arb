@@ -40,5 +40,16 @@
   "invalidEmailError": "Anna kelvollinen sähköpostiosoite.",
   "signIn_Title": "Kirjaudu sisään",
   "signIn_SignInBtnTitle": "KIRJAUDU SISÄÄN",
-  "signIn_forgotYourPasswordBtnTitle": "Unohditko salasanasi?"
+  "signIn_forgotYourPasswordBtnTitle": "Unohditko salasanasi?",
+  "home_UpdateProfileBtnTitle": "Päivitä",
+  "home_SignOutBtnTitle": "Kirjaudu ulos",
+  "home_SignOutDialogTitle": "Kirjaudu ulos",
+  "home_SignOutDialogMessage": "Haluatko varmasti kirjautua ulos?",
+  "dialog_Yes": "Jatka",
+  "dialog_No": "Sulje",
+  "home_Welcome": "Tervetuloa",
+  "home_AvailableRestaurants": "Saatavilla olevat ravintolat",
+  "home_NoRestaurants": "Ei ravintoloita saatavilla",
+  "home_Restaurant_Opens": "Aukeaa klo",
+  "home_Restaurant_Closes": "Sulkeutuu klo"
 }

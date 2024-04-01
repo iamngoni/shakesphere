@@ -41,5 +41,16 @@
   "invalidEmailError": "الرجاء إدخال عنوان بريد إلكتروني صحيح",
   "signIn_Title": "تسجيل الدخول",
   "signIn_SignInBtnTitle": "تسجيل الدخول",
-  "signIn_forgotYourPasswordBtnTitle": "نسيت كلمة المرور؟"
+  "signIn_forgotYourPasswordBtnTitle": "نسيت كلمة المرور؟",
+  "home_UpdateProfileBtnTitle": "تحديث",
+  "home_SignOutBtnTitle": "تسجيل الخروج",
+  "home_SignOutDialogTitle": "تسجيل الخروج",
+  "home_SignOutDialogMessage": "هل أنت متأكد من أنك تريد تسجيل الخروج؟",
+  "dialog_Yes": "متابعة",
+  "dialog_No": "رفض",
+  "home_Welcome": "مرحبا",
+  "home_AvailableRestaurants": "المطاعم المتاحة",
+  "home_NoRestaurants": "لا توجد مطاعم متوفرة",
+  "home_Restaurant_Opens": "يفتح في",
+  "home_Restaurant_Closes": "يغلق في"
 }

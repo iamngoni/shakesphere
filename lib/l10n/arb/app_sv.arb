@@ -40,5 +40,16 @@
   "invalidEmailError": "Ange en giltig e-postadress",
   "signIn_Title": "Logga in",
   "signIn_SignInBtnTitle": "LOGGA IN",
-  "signIn_forgotYourPasswordBtnTitle": "Glömt lösenordet?"
+  "signIn_forgotYourPasswordBtnTitle": "Glömt lösenordet?",
+  "home_UpdateProfileBtnTitle": "Uppdatera",
+  "home_SignOutBtnTitle": "Logga ut",
+  "home_SignOutDialogTitle": "Logga ut",
+  "home_SignOutDialogMessage": "Är du säker på att du vill logga ut?",
+  "dialog_Yes": "Fortsätt",
+  "dialog_No": "Avvisa",
+  "home_Welcome": "Välkommen",
+  "home_AvailableRestaurants": "Restauranger i närheten",
+  "home_NoRestaurants": "Det finns inga restauranger att visa",
+  "home_Restaurant_Opens": "Öppnar",
+  "home_Restaurant_Closes": "Stänger"
 }

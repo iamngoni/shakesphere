@@ -40,5 +40,16 @@
   "invalidEmailError": "Πληκτρολογήστε μια έγκυρη διεύθυνση email",
   "signIn_Title": "Σύνδεση",
   "signIn_SignInBtnTitle": "ΣΥΝΔΕΣΗ",
-  "signIn_forgotYourPasswordBtnTitle": "Ξεχάσατε τον κωδικό σας;"
+  "signIn_forgotYourPasswordBtnTitle": "Ξεχάσατε τον κωδικό σας;",
+  "home_UpdateProfileBtnTitle": "Ενημέρωση",
+  "home_SignOutBtnTitle": "Αποσύνδεση",
+  "home_SignOutDialogTitle": "Αποσύνδεση",
+  "home_SignOutDialogMessage": "Είστε σίγουροι ότι θέλετε να αποσυνδεθείτε;",
+  "dialog_Yes": "Συνέχεια",
+  "dialog_No": "Ακύρωση",
+  "home_Welcome": "Καλώς ήρθατε",
+  "home_AvailableRestaurants": "Διαθέσιμα εστιατόρια",
+  "home_NoRestaurants": "Δεν υπάρχουν διαθέσιμα εστιατόρια",
+  "home_Restaurant_Opens": "Ανοίγει στις",
+  "home_Restaurant_Closes": "Κλείνει στις"
 }

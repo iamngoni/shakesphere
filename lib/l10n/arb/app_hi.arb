@@ -40,5 +40,16 @@
   "invalidEmailError": " कृपया कोई वैध ईमेल पता दर्ज करें",
   "signIn_Title": "साइन इन करें",
   "signIn_SignInBtnTitle": "साइन इन करें",
-  "signIn_forgotYourPasswordBtnTitle": "पासवर्ड भूल गए?"
+  "signIn_forgotYourPasswordBtnTitle": "पासवर्ड भूल गए?",
+  "home_UpdateProfileBtnTitle": "अपडेट करें",
+  "home_SignOutBtnTitle": "साइन आउट करें",
+  "home_SignOutDialogTitle": "साइन आउट",
+  "home_SignOutDialogMessage": "क्या आप निश्चित हैं कि आप साइन आउट करना चाहते हैं?",
+  "dialog_Yes": "जारी रखें",
+  "dialog_No": "अस्वीकार करें",
+  "home_Welcome": "स्वागत है",
+  "home_AvailableRestaurants": "उपलब्ध रेस्टोरेंट",
+  "home_NoRestaurants": "कोई रेस्टोरेंट उपलब्ध नहीं है",
+  "home_Restaurant_Opens": "खुलने का समय",
+  "home_Restaurant_Closes": "बंद होने का समय"
 }

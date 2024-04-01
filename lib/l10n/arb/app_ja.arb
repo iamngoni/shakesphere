@@ -41,5 +41,16 @@
   "invalidEmailError": "有効なメールアドレスを入力してください",
   "signIn_Title": "サインイン",
   "signIn_SignInBtnTitle": "サインイン",
-  "signIn_forgotYourPasswordBtnTitle": "パスワードをお忘れですか？"
+  "signIn_forgotYourPasswordBtnTitle": "パスワードをお忘れですか？",
+  "home_UpdateProfileBtnTitle": "アップデート",
+  "home_SignOutBtnTitle": "サインアウト",
+  "home_SignOutDialogTitle": "サインアウト",
+  "home_SignOutDialogMessage": "サインアウトしてもよろしいですか？",
+  "dialog_Yes": "続行",
+  "dialog_No": "閉じる",
+  "home_Welcome": "ようこそ、",
+  "home_AvailableRestaurants": "利用可能なレストラン",
+  "home_NoRestaurants": "利用可能なレストランがありません",
+  "home_Restaurant_Opens": "オープン時刻",
+  "home_Restaurant_Closes": "閉店時刻"
 }

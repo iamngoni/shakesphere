@@ -40,5 +40,16 @@
   "invalidEmailError": "Voer een geldig e-mailadres in",
   "signIn_Title": "Aanmelden",
   "signIn_SignInBtnTitle": "AANMELDEN",
-  "signIn_forgotYourPasswordBtnTitle": "Wachtwoord vergeten?"
+  "signIn_forgotYourPasswordBtnTitle": "Wachtwoord vergeten?",
+  "home_UpdateProfileBtnTitle": "Bijwerken",
+  "home_SignOutBtnTitle": "Uitloggen",
+  "home_SignOutDialogTitle": "Uitloggen",
+  "home_SignOutDialogMessage": "Weet je zeker dat je wilt uitloggen?",
+  "dialog_Yes": "Doorgaan",
+  "dialog_No": "Sluiten",
+  "home_Welcome": "Welkom",
+  "home_AvailableRestaurants": "Beschikbare restaurants",
+  "home_NoRestaurants": "Geen restaurants beschikbaar",
+  "home_Restaurant_Opens": "Open om",
+  "home_Restaurant_Closes": "Sluit om"
 }

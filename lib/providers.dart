@@ -18,7 +18,7 @@ import 'shared/state/locale/locale_bloc.dart';
 
 List<BlocProvider> providers = [
   BlocProvider<LocaleBloc>(
-    create: (_) => getIt<LocaleBloc>(),
+    create: (_) => getIt<LocaleBloc>()..add(const LoadLocale()),
   ),
   BlocProvider<ConnectivityStatusBloc>(
     create: (_) => getIt<ConnectivityStatusBloc>(),

@@ -40,5 +40,16 @@
   "invalidEmailError": "Inserisci un indirizzo email valido",
   "signIn_Title": "Accedi",
   "signIn_SignInBtnTitle": "ACCEDI",
-  "signIn_forgotYourPasswordBtnTitle": "Hai dimenticato la password?"
+  "signIn_forgotYourPasswordBtnTitle": "Hai dimenticato la password?",
+  "home_UpdateProfileBtnTitle": "Aggiorna",
+  "home_SignOutBtnTitle": "Disconnetti",
+  "home_SignOutDialogTitle": "Disconnetti",
+  "home_SignOutDialogMessage": "Sei sicuro di volerti disconnettere?",
+  "dialog_Yes": "Continua",
+  "dialog_No": "Annulla",
+  "home_Welcome": "Benvenuto",
+  "home_AvailableRestaurants": "Ristoranti disponibili",
+  "home_NoRestaurants": "Nessun ristorante disponibile",
+  "home_Restaurant_Opens": "Apre alle",
+  "home_Restaurant_Closes": "Chiude alle"
 }

@@ -195,5 +195,21 @@
     "home_Welcome": "Welcome",
     "@home_Welcome": {
         "description": "Text displayed on the home screen"
+    },
+    "home_AvailableRestaurants": "Available Restaurants",
+    "@home_AvailableRestaurants": {
+        "description": "Text displayed on the home screen"
+    },
+    "home_NoRestaurants": "No restaurants available",
+    "@home_NoRestaurants": {
+        "description": "Text displayed on the home screen"
+    },
+    "home_Restaurant_Opens": "Opens at",
+    "@home_Restaurant_Opens": {
+        "description": "Text displayed on the home screen"
+    },
+    "home_Restaurant_Closes": "Closes at",
+    "@home_Restaurant_Closes": {
+        "description": "Text displayed on the home screen"
     }
 }

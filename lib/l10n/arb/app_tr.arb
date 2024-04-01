@@ -40,5 +40,16 @@
   "invalidEmailError": "Lütfen geçerli bir e-posta adresi girin",
   "signIn_Title": "Oturum açın",
   "signIn_SignInBtnTitle": "OTURUM AÇ",
-  "signIn_forgotYourPasswordBtnTitle": "Şifrenizi mi unuttunuz?"
+  "signIn_forgotYourPasswordBtnTitle": "Şifrenizi mi unuttunuz?",
+  "home_UpdateProfileBtnTitle": "Güncelle",
+  "home_SignOutBtnTitle": "Oturumu kapat",
+  "home_SignOutDialogTitle": "Oturumu kapat",
+  "home_SignOutDialogMessage": "Oturumunu kapatmak istediğinizden emin misiniz?",
+  "dialog_Yes": "Devam",
+  "dialog_No": "İptal",
+  "home_Welcome": "Hoş geldiniz",
+  "home_AvailableRestaurants": "Mevcut Restoranlar",
+  "home_NoRestaurants": "No restaurants available",
+  "home_Restaurant_Opens": "Saatinde açılıyor",
+  "home_Restaurant_Closes": "Saatinde kapanıyor"
 }

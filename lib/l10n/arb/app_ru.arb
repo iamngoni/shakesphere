@@ -40,5 +40,16 @@
   "invalidEmailError": "Введите действительный адрес электронной почты",
   "signIn_Title": "Войти",
   "signIn_SignInBtnTitle": "ВОЙТИ",
-  "signIn_forgotYourPasswordBtnTitle": "Забыли пароль?"
+  "signIn_forgotYourPasswordBtnTitle": "Забыли пароль?",
+  "home_UpdateProfileBtnTitle": "Обновить",
+  "home_SignOutBtnTitle": "Выйти",
+  "home_SignOutDialogTitle": "Выход",
+  "home_SignOutDialogMessage": "Вы точно хотите выйти?",
+  "dialog_Yes": "Продолжить",
+  "dialog_No": "Отклонить",
+  "home_Welcome": "Добро пожаловать",
+  "home_AvailableRestaurants": "Доступные рестораны",
+  "home_NoRestaurants": "Ресторанов нет",
+  "home_Restaurant_Opens": "Открывается в",
+  "home_Restaurant_Closes": "Закрывается в"
 }

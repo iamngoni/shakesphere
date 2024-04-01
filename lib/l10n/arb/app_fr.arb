@@ -41,5 +41,16 @@
   "invalidEmailError": "Veuillez saisir une adresse e-mail valide",
   "signIn_Title": "Se connecter",
   "signIn_SignInBtnTitle": "SE CONNECTER",
-  "signIn_forgotYourPasswordBtnTitle": "Mot de passe oublié ?"
+  "signIn_forgotYourPasswordBtnTitle": "Mot de passe oublié ?",
+  "home_UpdateProfileBtnTitle": "Mettre à jour",
+  "home_SignOutBtnTitle": "Se déconnecter",
+  "home_SignOutDialogTitle": "Se déconnecter",
+  "home_SignOutDialogMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+  "dialog_Yes": "Continuer",
+  "dialog_No": "Annuler",
+  "home_Welcome": "Bienvenue",
+  "home_AvailableRestaurants": "Restaurants disponibles",
+  "home_NoRestaurants": "Aucun restaurant disponible",
+  "home_Restaurant_Opens": "Ouvre à",
+  "home_Restaurant_Closes": "Ferme à"
 }

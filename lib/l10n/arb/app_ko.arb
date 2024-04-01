@@ -41,5 +41,16 @@
   "invalidEmailError": "유효한 이메일 주소를 입력해 주세요",
   "signIn_Title": "로그인",
   "signIn_SignInBtnTitle": "로그인",
-  "signIn_forgotYourPasswordBtnTitle": "비밀번호를 잊으셨나요?"
+  "signIn_forgotYourPasswordBtnTitle": "비밀번호를 잊으셨나요?",
+  "home_UpdateProfileBtnTitle": "업데이트",
+  "home_SignOutBtnTitle": "로그아웃",
+  "home_SignOutDialogTitle": "로그아웃",
+  "home_SignOutDialogMessage": "정말 로그아웃하시겠습니까?",
+  "dialog_Yes": "계속",
+  "dialog_No": "취소",
+  "home_Welcome": "환영합니다",
+  "home_AvailableRestaurants": "이용 가능한 식당",
+  "home_NoRestaurants": "가용한 식당이 없습니다",
+  "home_Restaurant_Opens": "오픈:",
+  "home_Restaurant_Closes": "클로즈:"
 }

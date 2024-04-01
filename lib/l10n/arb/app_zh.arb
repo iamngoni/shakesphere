@@ -41,5 +41,16 @@
   "invalidEmailError": "请输入有效的电子邮件地址",
   "signIn_Title": "登录",
   "signIn_SignInBtnTitle": "登录",
-  "signIn_forgotYourPasswordBtnTitle": "忘记密码了吗？"
+  "signIn_forgotYourPasswordBtnTitle": "忘记密码了吗？",
+  "home_UpdateProfileBtnTitle": "更新",
+  "home_SignOutBtnTitle": "退出",
+  "home_SignOutDialogTitle": "退出",
+  "home_SignOutDialogMessage": "您确定要退出吗？",
+  "dialog_Yes": "继续",
+  "dialog_No": "关闭",
+  "home_Welcome": "欢迎",
+  "home_AvailableRestaurants": "可用店铺",
+  "home_NoRestaurants": "没有可用餐厅",
+  "home_Restaurant_Opens": "营业于",
+  "home_Restaurant_Closes": "歇业于"
 }

@@ -40,5 +40,16 @@
   "invalidEmailError": "Nceda faka idilesi ye-imeyile efanele",
   "signIn_Title": "Ngena",
   "signIn_SignInBtnTitle": "NGENA",
-  "signIn_forgotYourPasswordBtnTitle": "Uyilibele iphasiwedi yakho?"
+  "signIn_forgotYourPasswordBtnTitle": "Uyilibele iphasiwedi yakho?",
+  "home_UpdateProfileBtnTitle": "Buyekeza",
+  "home_SignOutBtnTitle": "Phuma",
+  "home_SignOutDialogTitle": "Phuma",
+  "home_SignOutDialogMessage": "Ingabe uqinisekile ukuthi ufuna ukuphuma?",
+  "dialog_Yes": "Qhubeka",
+  "dialog_No": "Xosha",
+  "home_Welcome": "Sawubona",
+  "home_AvailableRestaurants": "AmaResto Atholayo",
+  "home_NoRestaurants": "Akulaw’ esitolo ezitholakalayo",
+  "home_Restaurant_Opens": "Ivulakala nge",
+  "home_Restaurant_Closes": "IVALAKALA NGOKU"
 }

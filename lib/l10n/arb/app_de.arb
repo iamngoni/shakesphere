@@ -41,5 +41,16 @@
   "invalidEmailError": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
   "signIn_Title": "Anmelden",
   "signIn_SignInBtnTitle": "ANMELDEN",
-  "signIn_forgotYourPasswordBtnTitle": "Passwort vergessen?"
+  "signIn_forgotYourPasswordBtnTitle": "Passwort vergessen?",
+  "home_UpdateProfileBtnTitle": "Profil aktualisieren",
+  "home_SignOutBtnTitle": "Abmelden",
+  "home_SignOutDialogTitle": "Abmelden",
+  "home_SignOutDialogMessage": "Möchtest du dich wirklich abmelden?",
+  "dialog_Yes": "Fortfahren",
+  "dialog_No": "Schließen",
+  "home_Welcome": "Willkommen",
+  "home_AvailableRestaurants": "Verfügbare Restaurants",
+  "home_NoRestaurants": "Keine Restaurants verfügbar",
+  "home_Restaurant_Opens": "Öffnet um",
+  "home_Restaurant_Closes": "Schließt um"
 }

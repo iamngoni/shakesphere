@@ -40,5 +40,16 @@
   "invalidEmailError": "Indtast en gyldig e-mailadresse",
   "signIn_Title": "Log ind",
   "signIn_SignInBtnTitle": "LOG IND",
-  "signIn_forgotYourPasswordBtnTitle": "Glemt din adgangskode?"
+  "signIn_forgotYourPasswordBtnTitle": "Glemt din adgangskode?",
+  "home_UpdateProfileBtnTitle": "Opdater",
+  "home_SignOutBtnTitle": "Log ud",
+  "home_SignOutDialogTitle": "Log ud",
+  "home_SignOutDialogMessage": "Er du sikker på, at du vil logge ud?",
+  "dialog_Yes": "Fortsæt",
+  "dialog_No": "Annullér",
+  "home_Welcome": "Velkommen",
+  "home_AvailableRestaurants": "Tilgængelige restauranter",
+  "home_NoRestaurants": "Ingen restauranter tilgængelige",
+  "home_Restaurant_Opens": "Åbner kl.",
+  "home_Restaurant_Closes": "Lukker kl."
 }
