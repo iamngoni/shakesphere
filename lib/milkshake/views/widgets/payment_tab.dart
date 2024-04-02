@@ -6,26 +6,102 @@
 //  Copyright (c) 2024 ModestNerds, Co
 //
 
+import 'dart:async';
+import 'dart:developer';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:handy_extensions/handy_extensions.dart';
 import 'package:relative_scale/relative_scale.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 import '../../../../l10n/l10n.dart';
 import '../../../../shared/configs/colors.dart';
 import '../../../../shared/widgets/loader.dart';
+import '../../../injection.dart';
 import '../../../shared/extensions/context.dart';
+import '../../../shared/models/api_response.dart';
 import '../../../shared/utils/functions.dart';
+import '../../../shared/utils/modal.dart';
+import '../../../shared/widgets/sj_button.dart';
+import '../../models/data/discount.dart';
 import '../../models/data/payment_method.dart';
 import '../../state/configs/configs_bloc.dart';
 import '../../state/milkshake_order/milkshake_order_bloc.dart';
+import 'discount_modal.dart';
 import 'payment_method_tile.dart';
 
-class PaymentTab extends StatelessWidget {
+class PaymentTab extends StatefulWidget {
   const PaymentTab({
     super.key,
   });
+
+  @override
+  State<PaymentTab> createState() => _PaymentTabState();
+}
+
+class _PaymentTabState extends State<PaymentTab> {
+  bool checkingDiscount = false;
+
+  Future<void> checkForDiscount() async {
+    try {
+      setState(() {
+        checkingDiscount = true;
+      });
+      final Dio dio = getIt<Dio>();
+      final Response<ApiResponse> response =
+          await dio.get('/discounts/check-discount');
+
+      setState(() {
+        checkingDiscount = false;
+      });
+
+      final ApiResponse apiResponse = response.data!;
+
+      final Discount discount = Discount.fromJson(apiResponse.data!);
+
+      log(discount.toString());
+
+      if (discount.eligible) {
+        context.notify(
+          context.l10n.milkshakeOrder_DiscountSuccess,
+        );
+
+        $showModal(
+          context,
+          maxHeight: 400,
+          child: DiscountModal(discount: discount),
+        );
+      } else {
+        context.notify(
+          context.l10n.milkshakeOrder_DiscountFailure,
+          isError: true,
+        );
+      }
+    } on DioException catch (e, s) {
+      log(e.toString(), error: e, stackTrace: s);
+      unawaited(Sentry.captureException(e, stackTrace: s));
+      context.notify(
+        context.l10n.milkshakeOrder_DiscountError,
+        isError: true,
+      );
+      setState(() {
+        checkingDiscount = false;
+      });
+    } catch (e, s) {
+      log(e.toString(), error: e, stackTrace: s);
+      unawaited(Sentry.captureException(e, stackTrace: s));
+      context.notify(
+        context.l10n.milkshakeOrder_DiscountError,
+        isError: true,
+      );
+      setState(() {
+        checkingDiscount = false;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -265,6 +341,115 @@ class PaymentTab extends StatelessWidget {
                           ),
                         ),
                       );
+                    },
+                  ),
+                  SizedBox(
+                    height: sy(15),
+                  ),
+                  BlocBuilder<MilkshakeOrderBloc, MilkshakeOrderState>(
+                    builder: (context, state) {
+                      return state.discount == null
+                          ? Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  context
+                                      .l10n.milkshakeOrder_DiscountEligibility,
+                                  style: TextStyle(
+                                    color: AppColors.blue,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: sy(10),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: sy(3),
+                                ),
+                                if (checkingDiscount == false)
+                                  SizedBox(
+                                    width: sx(200),
+                                    child: SjButton(
+                                      text: context.l10n.milkshakeOrder_Check,
+                                      onTap: checkForDiscount,
+                                    ),
+                                  )
+                                else
+                                  const LoaderWidget(),
+                              ],
+                            )
+                          : state.discount!.eligible
+                              ? Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      context.l10n.milkshakeOrder_Discount,
+                                      style: TextStyle(
+                                        color: AppColors.blue,
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: sy(10),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: sy(3),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          'ZAR ${state.discount?.discount.toStringAsFixed(2)}',
+                                          style: TextStyle(
+                                            color: AppColors.blue,
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: sy(12),
+                                            decoration:
+                                                TextDecoration.underline,
+                                            decorationColor: AppColors.blue,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: sx(20),
+                                        ),
+                                        SjButton(
+                                          text: 'Remove',
+                                          icon: Icons.close,
+                                          backgroundColor: AppColors.red,
+                                          onTap: () {
+                                            context
+                                                .read<MilkshakeOrderBloc>()
+                                                .add(
+                                                    const ClearDiscountEvent());
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              : Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      context.l10n
+                                          .milkshakeOrder_DiscountEligibility,
+                                      style: TextStyle(
+                                        color: AppColors.blue,
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: sy(10),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: sy(3),
+                                    ),
+                                    if (checkingDiscount == false)
+                                      SizedBox(
+                                        width: sx(200),
+                                        child: SjButton(
+                                          text:
+                                              context.l10n.milkshakeOrder_Check,
+                                          onTap: checkForDiscount,
+                                        ),
+                                      )
+                                    else
+                                      const LoaderWidget(),
+                                  ],
+                                );
                     },
                   ),
                   SizedBox(

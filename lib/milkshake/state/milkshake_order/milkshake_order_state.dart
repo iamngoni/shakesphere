@@ -9,6 +9,7 @@ class MilkshakeOrderState extends Equatable {
     this.collectionTime,
     this.paymentMethod,
     this.numberOfDrinks,
+    this.discount,
   );
 
   factory MilkshakeOrderState.initial() {
@@ -19,7 +20,7 @@ class MilkshakeOrderState extends Equatable {
       minute: now.minute,
     );
     return MilkshakeOrderState(
-        null, null, const [], 0, collectionTime, null, 1);
+        null, null, const [], 0, collectionTime, null, 1, null);
   }
 
   final Flavor? flavor;
@@ -29,6 +30,7 @@ class MilkshakeOrderState extends Equatable {
   final TimeOfDay collectionTime;
   final PaymentMethod? paymentMethod;
   final int numberOfDrinks;
+  final Discount? discount;
 
   MilkshakeOrderState copyWith({
     Flavor? flavor,
@@ -38,6 +40,7 @@ class MilkshakeOrderState extends Equatable {
     TimeOfDay? collectionTime,
     PaymentMethod? paymentMethod,
     int? numberOfDrinks,
+    Discount? discount,
   }) {
     return MilkshakeOrderState(
       flavor ?? this.flavor,
@@ -47,6 +50,7 @@ class MilkshakeOrderState extends Equatable {
       collectionTime ?? this.collectionTime,
       paymentMethod ?? this.paymentMethod,
       numberOfDrinks ?? this.numberOfDrinks,
+      discount ?? this.discount,
     );
   }
 
@@ -61,6 +65,12 @@ class MilkshakeOrderState extends Equatable {
     total += toppings.fold(0, (prev, element) => prev + element.cost);
 
     total *= numberOfDrinks;
+
+    if (discount != null) {
+      if (discount!.eligible) {
+        total -= discount!.discount;
+      }
+    }
 
     return total;
   }
@@ -89,5 +99,6 @@ class MilkshakeOrderState extends Equatable {
         collectionTime,
         paymentMethod,
         numberOfDrinks,
+        discount,
       ];
 }

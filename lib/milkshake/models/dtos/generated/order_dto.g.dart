@@ -15,6 +15,7 @@ _$OrderDTOImpl _$$OrderDTOImplFromJson(Map json) => _$OrderDTOImpl(
       pickupTime: DateTime.parse(json['pickupTime'] as String),
       paymentMethod: $enumDecode(_$PaymentMethodEnumMap, json['paymentMethod']),
       numberOfDrinks: json['numberOfDrinks'] as int,
+      discount: (json['discount'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$OrderDTOImplToJson(_$OrderDTOImpl instance) =>
@@ -26,6 +27,7 @@ Map<String, dynamic> _$$OrderDTOImplToJson(_$OrderDTOImpl instance) =>
       'pickupTime': instance.pickupTime.toIso8601String(),
       'paymentMethod': _$PaymentMethodEnumMap[instance.paymentMethod]!,
       'numberOfDrinks': instance.numberOfDrinks,
+      'discount': instance.discount,
     };
 
 const _$PaymentMethodEnumMap = {

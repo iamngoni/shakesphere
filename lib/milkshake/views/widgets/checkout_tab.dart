@@ -148,31 +148,53 @@ class CheckoutTab extends StatelessWidget {
                           ),
                         ],
                       ),
-                      ...state.toppings
-                          .map(
-                            (topping) => Row(
-                              children: [
-                                Text(
-                                  topping.name,
-                                  style: TextStyle(
-                                    color: AppColors.blue,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: sy(9),
-                                  ),
-                                ),
-                                const Spacer(),
-                                Text(
-                                  'ZAR ${topping.cost.toStringAsFixed(2)}',
-                                  style: TextStyle(
-                                    color: AppColors.blue,
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: sy(10),
-                                  ),
-                                ),
-                              ],
+                      ...state.toppings.map(
+                        (topping) => Row(
+                          children: [
+                            Text(
+                              topping.name,
+                              style: TextStyle(
+                                color: AppColors.blue,
+                                fontWeight: FontWeight.w400,
+                                fontSize: sy(9),
+                              ),
                             ),
-                          )
-                          .toList(),
+                            const Spacer(),
+                            Text(
+                              'ZAR ${topping.cost.toStringAsFixed(2)}',
+                              style: TextStyle(
+                                color: AppColors.blue,
+                                fontWeight: FontWeight.w900,
+                                fontSize: sy(10),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      if (state.discount != null && state.discount!.eligible)
+                        Row(
+                          children: [
+                            Text(
+                              context.l10n.milkshakeOrder_Discount,
+                              style: TextStyle(
+                                color: AppColors.yellow,
+                                fontWeight: FontWeight.w400,
+                                fontSize: sy(9),
+                              ),
+                            ),
+                            const Spacer(),
+                            Text(
+                              '- ZAR ${state.discount!.discount.toStringAsFixed(2)}',
+                              style: TextStyle(
+                                color: AppColors.yellow,
+                                fontWeight: FontWeight.w900,
+                                fontSize: sy(10),
+                              ),
+                            ),
+                          ],
+                        )
+                      else
+                        const SizedBox.shrink(),
                       const Divider(
                         color: AppColors.border,
                       ),
@@ -264,6 +286,9 @@ class CheckoutTab extends StatelessWidget {
                     minute: state.collectionTime.minute,
                   ),
                   numberOfDrinks: state.numberOfDrinks,
+                  discount: state.discount != null && state.discount!.eligible
+                      ? state.discount!.discount
+                      : 0,
                 );
 
                 context.read<OrdersBloc>().add(CreateOrderEvent(dto));

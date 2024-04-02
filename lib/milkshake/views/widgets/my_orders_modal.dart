@@ -217,6 +217,29 @@ class MyOrdersModal extends StatelessWidget {
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
+                                            context
+                                                .l10n.milkshakeOrder_Discount,
+                                            style: TextStyle(
+                                              color: AppColors.blue,
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: sy(7),
+                                            ),
+                                          ),
+                                          Text(
+                                            '- ZAR ${order.discount.toStringAsFixed(2)}',
+                                            style: TextStyle(
+                                              color: AppColors.blue,
+                                              fontWeight: FontWeight.w900,
+                                              fontSize: sy(7),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
                                             context.l10n.milkshakeOrder_Tax,
                                             style: TextStyle(
                                               color: AppColors.blue,

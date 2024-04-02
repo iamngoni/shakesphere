@@ -27,6 +27,7 @@ mixin _$OrderDTO {
   DateTime get pickupTime => throw _privateConstructorUsedError;
   PaymentMethod get paymentMethod => throw _privateConstructorUsedError;
   int get numberOfDrinks => throw _privateConstructorUsedError;
+  double get discount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,7 +47,8 @@ abstract class $OrderDTOCopyWith<$Res> {
       List<int> toppings,
       DateTime pickupTime,
       PaymentMethod paymentMethod,
-      int numberOfDrinks});
+      int numberOfDrinks,
+      double discount});
 }
 
 /// @nodoc
@@ -69,6 +71,7 @@ class _$OrderDTOCopyWithImpl<$Res, $Val extends OrderDTO>
     Object? pickupTime = null,
     Object? paymentMethod = null,
     Object? numberOfDrinks = null,
+    Object? discount = null,
   }) {
     return _then(_value.copyWith(
       restaurantId: null == restaurantId
@@ -99,6 +102,10 @@ class _$OrderDTOCopyWithImpl<$Res, $Val extends OrderDTO>
           ? _value.numberOfDrinks
           : numberOfDrinks // ignore: cast_nullable_to_non_nullable
               as int,
+      discount: null == discount
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -118,7 +125,8 @@ abstract class _$$OrderDTOImplCopyWith<$Res>
       List<int> toppings,
       DateTime pickupTime,
       PaymentMethod paymentMethod,
-      int numberOfDrinks});
+      int numberOfDrinks,
+      double discount});
 }
 
 /// @nodoc
@@ -139,6 +147,7 @@ class __$$OrderDTOImplCopyWithImpl<$Res>
     Object? pickupTime = null,
     Object? paymentMethod = null,
     Object? numberOfDrinks = null,
+    Object? discount = null,
   }) {
     return _then(_$OrderDTOImpl(
       restaurantId: null == restaurantId
@@ -169,6 +178,10 @@ class __$$OrderDTOImplCopyWithImpl<$Res>
           ? _value.numberOfDrinks
           : numberOfDrinks // ignore: cast_nullable_to_non_nullable
               as int,
+      discount: null == discount
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -183,7 +196,8 @@ class _$OrderDTOImpl extends _OrderDTO {
       required final List<int> toppings,
       required this.pickupTime,
       required this.paymentMethod,
-      required this.numberOfDrinks})
+      required this.numberOfDrinks,
+      required this.discount})
       : _toppings = toppings,
         super._();
 
@@ -210,10 +224,12 @@ class _$OrderDTOImpl extends _OrderDTO {
   final PaymentMethod paymentMethod;
   @override
   final int numberOfDrinks;
+  @override
+  final double discount;
 
   @override
   String toString() {
-    return 'OrderDTO(restaurantId: $restaurantId, flavorId: $flavorId, thicknessId: $thicknessId, toppings: $toppings, pickupTime: $pickupTime, paymentMethod: $paymentMethod, numberOfDrinks: $numberOfDrinks)';
+    return 'OrderDTO(restaurantId: $restaurantId, flavorId: $flavorId, thicknessId: $thicknessId, toppings: $toppings, pickupTime: $pickupTime, paymentMethod: $paymentMethod, numberOfDrinks: $numberOfDrinks, discount: $discount)';
   }
 
   @override
@@ -233,7 +249,9 @@ class _$OrderDTOImpl extends _OrderDTO {
             (identical(other.paymentMethod, paymentMethod) ||
                 other.paymentMethod == paymentMethod) &&
             (identical(other.numberOfDrinks, numberOfDrinks) ||
-                other.numberOfDrinks == numberOfDrinks));
+                other.numberOfDrinks == numberOfDrinks) &&
+            (identical(other.discount, discount) ||
+                other.discount == discount));
   }
 
   @JsonKey(ignore: true)
@@ -246,7 +264,8 @@ class _$OrderDTOImpl extends _OrderDTO {
       const DeepCollectionEquality().hash(_toppings),
       pickupTime,
       paymentMethod,
-      numberOfDrinks);
+      numberOfDrinks,
+      discount);
 
   @JsonKey(ignore: true)
   @override
@@ -270,7 +289,8 @@ abstract class _OrderDTO extends OrderDTO {
       required final List<int> toppings,
       required final DateTime pickupTime,
       required final PaymentMethod paymentMethod,
-      required final int numberOfDrinks}) = _$OrderDTOImpl;
+      required final int numberOfDrinks,
+      required final double discount}) = _$OrderDTOImpl;
   const _OrderDTO._() : super._();
 
   factory _OrderDTO.fromJson(Map<String, dynamic> json) =
@@ -290,6 +310,8 @@ abstract class _OrderDTO extends OrderDTO {
   PaymentMethod get paymentMethod;
   @override
   int get numberOfDrinks;
+  @override
+  double get discount;
   @override
   @JsonKey(ignore: true)
   _$$OrderDTOImplCopyWith<_$OrderDTOImpl> get copyWith =>

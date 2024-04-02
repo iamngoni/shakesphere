@@ -74,6 +74,21 @@ class DecrementNumberOfDrinksEvent extends MilkshakeOrderEvent {
   List<Object> get props => [];
 }
 
+class ApplyDiscountEvent extends MilkshakeOrderEvent {
+  const ApplyDiscountEvent(this.discount);
+  final Discount discount;
+
+  @override
+  List<Object> get props => [discount];
+}
+
+class ClearDiscountEvent extends MilkshakeOrderEvent {
+  const ClearDiscountEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
 class ClearOrderEvent extends MilkshakeOrderEvent {
   const ClearOrderEvent();
 

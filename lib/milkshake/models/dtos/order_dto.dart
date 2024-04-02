@@ -23,6 +23,7 @@ class OrderDTO with _$OrderDTO {
     required DateTime pickupTime,
     required PaymentMethod paymentMethod,
     required int numberOfDrinks,
+    required double discount,
   }) = _OrderDTO;
 
   const OrderDTO._();

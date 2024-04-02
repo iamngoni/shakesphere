@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../models/data/discount.dart';
 import '../../models/data/flavor.dart';
 import '../../models/data/payment_method.dart';
 import '../../models/data/thickness.dart';
@@ -24,6 +25,8 @@ class MilkshakeOrderBloc
     on<SelectPaymentMethodEvent>(onSelectPaymentMethodEvent);
     on<IncrementNumberOfDrinksEvent>(onIncreaseNumberOfDrinksEvent);
     on<DecrementNumberOfDrinksEvent>(onDecreaseNumberOfDrinksEvent);
+    on<ApplyDiscountEvent>(onApplyDiscountEvent);
+    on<ClearDiscountEvent>(onClearDiscountEvent);
     on<ClearOrderEvent>(onClearOrderEvent);
   }
 
@@ -94,6 +97,27 @@ class MilkshakeOrderBloc
     Emitter<MilkshakeOrderState> emit,
   ) async {
     emit(state.copyWith(numberOfDrinks: state.numberOfDrinks - 1));
+  }
+
+  Future<void> onApplyDiscountEvent(
+    ApplyDiscountEvent event,
+    Emitter<MilkshakeOrderState> emit,
+  ) async {
+    emit(state.copyWith(discount: event.discount));
+  }
+
+  Future<void> onClearDiscountEvent(
+    ClearDiscountEvent event,
+    Emitter<MilkshakeOrderState> emit,
+  ) async {
+    emit(
+      state.copyWith(
+        discount: state.discount?.copyWith(
+          discount: 0,
+          eligible: false,
+        ),
+      ),
+    );
   }
 
   Future<void> onClearOrderEvent(

@@ -323,5 +323,37 @@
     "milkshakeOrder_Drinks": "Drinks",
     "@milkshakeOrder_Drinks": {
         "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_DiscountEligibility": "Check if you are eligible for a discount",
+    "@milkshakeOrder_DiscountEligibility": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Check": "Check",
+    "@milkshakeOrder_Check": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_DiscountError": "Could not verify discount eligibility",
+    "@milkshakeOrder_DiscountError": {
+        "description": "Error message displayed when the discount eligibility check fails"
+    },
+    "milkshakeOrder_DiscountFailure": "You are not eligible for a discount",
+    "@milkshakeOrder_DiscountFailure": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_DiscountSuccess": "Congratulations! You are eligible for a discount",
+    "@milkshakeOrder_DiscountSuccess": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Discount": "Discount",
+    "@milkshakeOrder_Discount": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_ApplyDiscount": "Apply Discount",
+    "@milkshakeOrder_ApplyDiscount": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Dismiss": "Dismiss",
+    "@milkshakeOrder_Dismiss": {
+        "description": "Text displayed on the milkshake order screen"
     }
 }
