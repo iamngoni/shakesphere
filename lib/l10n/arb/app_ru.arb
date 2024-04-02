@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Поздравляем! Вы имеете право на скидку",
   "milkshakeOrder_Discount": "Скидка",
   "milkshakeOrder_ApplyDiscount": "Применить скидку",
-  "milkshakeOrder_Dismiss": "Закрыть"
+  "milkshakeOrder_Dismiss": "Закрыть",
+  "home_RetryBtnTitle": "Повторить"
 }

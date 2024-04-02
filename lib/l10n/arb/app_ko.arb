@@ -88,5 +88,6 @@
   "milkshakeOrder_DiscountSuccess": "축하합니다! 할인 적용이 가능합니다.",
   "milkshakeOrder_Discount": "할인",
   "milkshakeOrder_ApplyDiscount": "할인 적용",
-  "milkshakeOrder_Dismiss": "닫기"
+  "milkshakeOrder_Dismiss": "닫기",
+  "home_RetryBtnTitle": "다시 시도"
 }

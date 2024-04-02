@@ -355,5 +355,9 @@
     "milkshakeOrder_Dismiss": "Dismiss",
     "@milkshakeOrder_Dismiss": {
         "description": "Text displayed on the milkshake order screen"
+    },
+    "home_RetryBtnTitle": "Retry",
+    "@home_RetryBtnTitle": {
+        "description": "Title of the retry button displayed on the home screen"
     }
 }

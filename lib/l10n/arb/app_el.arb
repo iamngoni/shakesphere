@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Συγχαρητήρια! Δικαιούστε έκπτωση",
   "milkshakeOrder_Discount": "Έκπτωση",
   "milkshakeOrder_ApplyDiscount": "Εφαρμογή έκπτωσης",
-  "milkshakeOrder_Dismiss": "Απέρριψη"
+  "milkshakeOrder_Dismiss": "Απέρριψη",
+  "home_RetryBtnTitle": "Επανάληψη"
 }

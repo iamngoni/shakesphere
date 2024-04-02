@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Onneksi olkoon! Olet oikeutettu alennukseen",
   "milkshakeOrder_Discount": "Alennus",
   "milkshakeOrder_ApplyDiscount": "Käytä alennus",
-  "milkshakeOrder_Dismiss": "Poista"
+  "milkshakeOrder_Dismiss": "Poista",
+  "home_RetryBtnTitle": "Yritä uudelleen"
 }

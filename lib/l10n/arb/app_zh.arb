@@ -88,5 +88,6 @@
   "milkshakeOrder_DiscountSuccess": "恭喜！您有资格享受折扣",
   "milkshakeOrder_Discount": "折扣",
   "milkshakeOrder_ApplyDiscount": "应用折扣",
-  "milkshakeOrder_Dismiss": "关闭"
+  "milkshakeOrder_Dismiss": "关闭",
+  "home_RetryBtnTitle": "重试"
 }

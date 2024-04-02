@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Tillykke! Du er berettiget til rabat",
   "milkshakeOrder_Discount": "Rabat",
   "milkshakeOrder_ApplyDiscount": "Anvend rabat",
-  "milkshakeOrder_Dismiss": "Luk"
+  "milkshakeOrder_Dismiss": "Luk",
+  "home_RetryBtnTitle": "Prøv igen"
 }

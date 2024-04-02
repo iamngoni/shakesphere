@@ -88,5 +88,6 @@
   "milkshakeOrder_DiscountSuccess": "Félicitations ! Vous êtes éligible à une réduction",
   "milkshakeOrder_Discount": "Réduction",
   "milkshakeOrder_ApplyDiscount": "Appliquer la réduction",
-  "milkshakeOrder_Dismiss": "Fermer"
+  "milkshakeOrder_Dismiss": "Fermer",
+  "home_RetryBtnTitle": "Réessayer"
 }

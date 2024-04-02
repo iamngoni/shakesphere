@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "बधाई हो! आप छूट पाने के पात्र हैं",
   "milkshakeOrder_Discount": "छूट",
   "milkshakeOrder_ApplyDiscount": "छूट लागू करें",
-  "milkshakeOrder_Dismiss": "बंद करें"
+  "milkshakeOrder_Dismiss": "बंद करें",
+  "home_RetryBtnTitle": "पुन: प्रयास करें"
 }

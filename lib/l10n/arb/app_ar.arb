@@ -88,5 +88,6 @@
   "milkshakeOrder_DiscountSuccess": "مبروك! أنت مؤهل للحصول على خصم",
   "milkshakeOrder_Discount": "خصم",
   "milkshakeOrder_ApplyDiscount": "تطبيق الخصم",
-  "milkshakeOrder_Dismiss": "تجاهل"
+  "milkshakeOrder_Dismiss": "تجاهل",
+  "home_RetryBtnTitle": "إعادة المحاولة"
 }

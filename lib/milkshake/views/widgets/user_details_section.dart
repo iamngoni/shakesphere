@@ -18,6 +18,7 @@ import '../../../shared/utils/dialogs.dart';
 import '../../../shared/utils/modal.dart';
 import '../../../shared/widgets/language_selector.dart';
 import '../../../shared/widgets/loader.dart';
+import '../../../shared/widgets/sj_button.dart';
 import '../../state/user/user_bloc.dart';
 import 'my_orders_modal.dart';
 
@@ -216,6 +217,56 @@ class UserDetailsSection extends StatelessWidget {
                       child: const LanguageSelector(),
                     ),
                   ],
+                );
+              }
+
+              if (state is UserError) {
+                return Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: sx(20),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        state.error.title,
+                        style: TextStyle(
+                          color: AppColors.white,
+                          fontWeight: FontWeight.w900,
+                          fontSize: sy(10),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: sy(5),
+                      ),
+                      Text(
+                        state.error.message,
+                        style: TextStyle(
+                          color: AppColors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: sy(10),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: sy(10),
+                      ),
+                      SizedBox(
+                        width: sx(150),
+                        child: SjButton(
+                          text: context.l10n.home_RetryBtnTitle,
+                          color: AppColors.blue,
+                          backgroundColor: AppColors.white,
+                          onTap: () {
+                            context.read<UserBloc>().add(
+                                  const GetUserDetailsEvent(),
+                                );
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               }
 

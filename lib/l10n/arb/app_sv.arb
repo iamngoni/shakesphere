@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Grattis! Du har rätt till rabatt",
   "milkshakeOrder_Discount": "Rabatt",
   "milkshakeOrder_ApplyDiscount": "Använd rabatt",
-  "milkshakeOrder_Dismiss": "Avfärda"
+  "milkshakeOrder_Dismiss": "Avfärda",
+  "home_RetryBtnTitle": "Försök igen"
 }

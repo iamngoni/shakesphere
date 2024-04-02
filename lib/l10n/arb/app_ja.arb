@@ -88,5 +88,6 @@
   "milkshakeOrder_DiscountSuccess": "おめでとうございます! あなたは割引対象です",
   "milkshakeOrder_Discount": "割引",
   "milkshakeOrder_ApplyDiscount": "割引を適用",
-  "milkshakeOrder_Dismiss": "閉じる"
+  "milkshakeOrder_Dismiss": "閉じる",
+  "home_RetryBtnTitle": "再試行"
 }

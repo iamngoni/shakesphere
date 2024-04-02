@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Tebrikler! İndirim için uygunsunuz",
   "milkshakeOrder_Discount": "İndirim",
   "milkshakeOrder_ApplyDiscount": "İndirim Uygula",
-  "milkshakeOrder_Dismiss": "İptal"
+  "milkshakeOrder_Dismiss": "İptal",
+  "home_RetryBtnTitle": "Yeniden dene"
 }

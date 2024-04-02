@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Gefeliciteerd! Je komt in aanmerking voor korting",
   "milkshakeOrder_Discount": "Korting",
   "milkshakeOrder_ApplyDiscount": "Korting toepassen",
-  "milkshakeOrder_Dismiss": "Annuleren"
+  "milkshakeOrder_Dismiss": "Annuleren",
+  "home_RetryBtnTitle": "Opnieuw proberen"
 }

@@ -87,5 +87,6 @@
   "milkshakeOrder_DiscountSuccess": "Siyakubonga! Ufanelekiswe isaphulelo",
   "milkshakeOrder_Discount": "Isaphulelo",
   "milkshakeOrder_ApplyDiscount": "Faka isaphulelo",
-  "milkshakeOrder_Dismiss": "Xosha"
+  "milkshakeOrder_Dismiss": "Xosha",
+  "home_RetryBtnTitle": "Zama"
 }
