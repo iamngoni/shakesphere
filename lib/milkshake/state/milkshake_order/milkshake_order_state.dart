@@ -8,6 +8,7 @@ class MilkshakeOrderState extends Equatable {
     this.currentStage,
     this.collectionTime,
     this.paymentMethod,
+    this.numberOfDrinks,
   );
 
   factory MilkshakeOrderState.initial() {
@@ -17,7 +18,8 @@ class MilkshakeOrderState extends Equatable {
       hour: now.hour + 1,
       minute: now.minute,
     );
-    return MilkshakeOrderState(null, null, const [], 0, collectionTime, null);
+    return MilkshakeOrderState(
+        null, null, const [], 0, collectionTime, null, 1);
   }
 
   final Flavor? flavor;
@@ -26,6 +28,7 @@ class MilkshakeOrderState extends Equatable {
   final int currentStage;
   final TimeOfDay collectionTime;
   final PaymentMethod? paymentMethod;
+  final int numberOfDrinks;
 
   MilkshakeOrderState copyWith({
     Flavor? flavor,
@@ -34,6 +37,7 @@ class MilkshakeOrderState extends Equatable {
     int? currentStage,
     TimeOfDay? collectionTime,
     PaymentMethod? paymentMethod,
+    int? numberOfDrinks,
   }) {
     return MilkshakeOrderState(
       flavor ?? this.flavor,
@@ -42,6 +46,7 @@ class MilkshakeOrderState extends Equatable {
       currentStage ?? this.currentStage,
       collectionTime ?? this.collectionTime,
       paymentMethod ?? this.paymentMethod,
+      numberOfDrinks ?? this.numberOfDrinks,
     );
   }
 
@@ -55,6 +60,8 @@ class MilkshakeOrderState extends Equatable {
     }
     total += toppings.fold(0, (prev, element) => prev + element.cost);
 
+    total *= numberOfDrinks;
+
     return total;
   }
 
@@ -63,14 +70,7 @@ class MilkshakeOrderState extends Equatable {
   }
 
   double get totalCost {
-    double total = 0;
-    if (flavor != null) {
-      total += flavor!.cost;
-    }
-    if (thickness != null) {
-      total += thickness!.cost;
-    }
-    total += toppings.fold(0, (prev, element) => prev + element.cost);
+    double total = subtotal;
 
     if (currentStage == 4) {
       // add 15% tax
@@ -87,6 +87,7 @@ class MilkshakeOrderState extends Equatable {
         toppings,
         currentStage,
         collectionTime,
-        paymentMethod
+        paymentMethod,
+        numberOfDrinks,
       ];
 }

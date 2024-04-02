@@ -15,9 +15,11 @@ import '../../../auth/state/auth/auth_bloc.dart';
 import '../../../l10n/l10n.dart';
 import '../../../shared/configs/colors.dart';
 import '../../../shared/utils/dialogs.dart';
+import '../../../shared/utils/modal.dart';
 import '../../../shared/widgets/language_selector.dart';
 import '../../../shared/widgets/loader.dart';
 import '../../state/user/user_bloc.dart';
+import 'my_orders_modal.dart';
 
 class UserDetailsSection extends StatelessWidget {
   const UserDetailsSection({
@@ -120,6 +122,35 @@ class UserDetailsSection extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            GestureDetector(
+                              onTap: () {
+                                $showModal(
+                                  context,
+                                  child: const MyOrdersModal(),
+                                );
+                              },
+                              child: Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: sx(15),
+                                  vertical: sy(2),
+                                ),
+                                decoration: BoxDecoration(
+                                  color: AppColors.green,
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: Text(
+                                  context.l10n.home_MyOrders,
+                                  style: TextStyle(
+                                    color: AppColors.white,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: sy(9),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: sx(20),
+                            ),
                             Container(
                               padding: EdgeInsets.symmetric(
                                 horizontal: sx(15),

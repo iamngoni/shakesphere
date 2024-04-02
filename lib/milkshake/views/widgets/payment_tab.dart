@@ -138,11 +138,90 @@ class PaymentTab extends StatelessWidget {
                     height: sy(20),
                   ),
                   Text(
+                    context.l10n.milkshakeOrder_NumberOfDrinks,
+                    style: TextStyle(
+                      color: AppColors.blue,
+                      fontWeight: FontWeight.w900,
+                      fontSize: sy(10),
+                    ),
+                  ),
+                  SizedBox(
+                    height: sy(5),
+                  ),
+                  BlocBuilder<MilkshakeOrderBloc, MilkshakeOrderState>(
+                    builder: (context, state) {
+                      return Row(
+                        children: [
+                          Container(
+                            height: sy(15),
+                            width: sy(15),
+                            decoration: const BoxDecoration(
+                              color: AppColors.blue,
+                              shape: BoxShape.circle,
+                            ),
+                            alignment: Alignment.center,
+                            child: GestureDetector(
+                              onTap: () {
+                                if (state.numberOfDrinks > 1) {
+                                  context.read<MilkshakeOrderBloc>().add(
+                                      const DecrementNumberOfDrinksEvent());
+                                }
+                              },
+                              child: Icon(
+                                CupertinoIcons.minus,
+                                color: Colors.white,
+                                size: sy(10),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: sx(10),
+                          ),
+                          Text(
+                            state.numberOfDrinks.toString(),
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w900,
+                              fontSize: sy(12),
+                            ),
+                          ),
+                          SizedBox(
+                            width: sx(10),
+                          ),
+                          Container(
+                            height: sy(15),
+                            width: sy(15),
+                            decoration: const BoxDecoration(
+                              color: AppColors.blue,
+                              shape: BoxShape.circle,
+                            ),
+                            alignment: Alignment.center,
+                            child: GestureDetector(
+                              onTap: () {
+                                context
+                                    .read<MilkshakeOrderBloc>()
+                                    .add(const IncrementNumberOfDrinksEvent());
+                              },
+                              child: Icon(
+                                CupertinoIcons.add,
+                                color: Colors.white,
+                                size: sy(10),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                  SizedBox(
+                    height: sy(15),
+                  ),
+                  Text(
                     context.l10n.milkshakeOrder_SelectPickupTime,
                     style: TextStyle(
                       color: AppColors.blue,
-                      fontWeight: FontWeight.w700,
-                      fontSize: sy(8),
+                      fontWeight: FontWeight.w900,
+                      fontSize: sy(10),
                     ),
                   ),
                   BlocBuilder<MilkshakeOrderBloc, MilkshakeOrderState>(
@@ -156,7 +235,6 @@ class PaymentTab extends StatelessWidget {
                           );
                           if (time != null) {
                             // selected time of day cannot be less than the current time of day
-
                             final TimeOfDay now = TimeOfDay.now();
                             final TimeOfDay nowPlus15 = TimeOfDay(
                               hour: now.hour,

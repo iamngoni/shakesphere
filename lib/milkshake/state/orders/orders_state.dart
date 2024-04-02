@@ -17,10 +17,11 @@ class OrdersLoading extends OrdersState {
 }
 
 class OrdersLoaded extends OrdersState {
-  const OrdersLoaded(this.orders);
+  const OrdersLoaded(this.orders, {this.afterCheckout = false});
   final List<Order> orders;
+  final bool afterCheckout;
   @override
-  List<Object> get props => [orders];
+  List<Object> get props => [orders, afterCheckout];
 }
 
 class OrdersError extends OrdersState {

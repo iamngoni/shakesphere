@@ -10,6 +10,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'flavor.dart';
 import 'order_topping.dart';
+import 'payment_method.dart';
 import 'restaurant.dart';
 import 'thickness.dart';
 
@@ -28,6 +29,9 @@ class Order with _$Order {
     required double tax,
     required double total,
     required double discount,
+    required DateTime pickupTime,
+    required PaymentMethod paymentMethod,
+    required int numberOfDrinks,
     required DateTime createdAt,
     required DateTime updatedAt,
     required Restaurant restaurant,

@@ -52,7 +52,12 @@ class OrdersBloc extends Bloc<OrdersEvent, OrdersState> {
       response.fold(
         (l) => emit(OrdersError(l)),
         (r) {
-          emit(const OrdersLoaded([]));
+          emit(
+            OrdersLoaded(
+              [r],
+              afterCheckout: true,
+            ),
+          );
           add(const GetOrdersEvent());
         },
       );

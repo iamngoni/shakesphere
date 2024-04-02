@@ -29,6 +29,9 @@ mixin _$Order {
   double get tax => throw _privateConstructorUsedError;
   double get total => throw _privateConstructorUsedError;
   double get discount => throw _privateConstructorUsedError;
+  DateTime get pickupTime => throw _privateConstructorUsedError;
+  PaymentMethod get paymentMethod => throw _privateConstructorUsedError;
+  int get numberOfDrinks => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
   DateTime get updatedAt => throw _privateConstructorUsedError;
   Restaurant get restaurant => throw _privateConstructorUsedError;
@@ -56,6 +59,9 @@ abstract class $OrderCopyWith<$Res> {
       double tax,
       double total,
       double discount,
+      DateTime pickupTime,
+      PaymentMethod paymentMethod,
+      int numberOfDrinks,
       DateTime createdAt,
       DateTime updatedAt,
       Restaurant restaurant,
@@ -90,6 +96,9 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
     Object? tax = null,
     Object? total = null,
     Object? discount = null,
+    Object? pickupTime = null,
+    Object? paymentMethod = null,
+    Object? numberOfDrinks = null,
     Object? createdAt = null,
     Object? updatedAt = null,
     Object? restaurant = null,
@@ -134,6 +143,18 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
+      pickupTime: null == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      paymentMethod: null == paymentMethod
+          ? _value.paymentMethod
+          : paymentMethod // ignore: cast_nullable_to_non_nullable
+              as PaymentMethod,
+      numberOfDrinks: null == numberOfDrinks
+          ? _value.numberOfDrinks
+          : numberOfDrinks // ignore: cast_nullable_to_non_nullable
+              as int,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -203,6 +224,9 @@ abstract class _$$OrderImplCopyWith<$Res> implements $OrderCopyWith<$Res> {
       double tax,
       double total,
       double discount,
+      DateTime pickupTime,
+      PaymentMethod paymentMethod,
+      int numberOfDrinks,
       DateTime createdAt,
       DateTime updatedAt,
       Restaurant restaurant,
@@ -238,6 +262,9 @@ class __$$OrderImplCopyWithImpl<$Res>
     Object? tax = null,
     Object? total = null,
     Object? discount = null,
+    Object? pickupTime = null,
+    Object? paymentMethod = null,
+    Object? numberOfDrinks = null,
     Object? createdAt = null,
     Object? updatedAt = null,
     Object? restaurant = null,
@@ -282,6 +309,18 @@ class __$$OrderImplCopyWithImpl<$Res>
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
+      pickupTime: null == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      paymentMethod: null == paymentMethod
+          ? _value.paymentMethod
+          : paymentMethod // ignore: cast_nullable_to_non_nullable
+              as PaymentMethod,
+      numberOfDrinks: null == numberOfDrinks
+          ? _value.numberOfDrinks
+          : numberOfDrinks // ignore: cast_nullable_to_non_nullable
+              as int,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -323,6 +362,9 @@ class _$OrderImpl extends _Order {
       required this.tax,
       required this.total,
       required this.discount,
+      required this.pickupTime,
+      required this.paymentMethod,
+      required this.numberOfDrinks,
       required this.createdAt,
       required this.updatedAt,
       required this.restaurant,
@@ -354,6 +396,12 @@ class _$OrderImpl extends _Order {
   @override
   final double discount;
   @override
+  final DateTime pickupTime;
+  @override
+  final PaymentMethod paymentMethod;
+  @override
+  final int numberOfDrinks;
+  @override
   final DateTime createdAt;
   @override
   final DateTime updatedAt;
@@ -373,7 +421,7 @@ class _$OrderImpl extends _Order {
 
   @override
   String toString() {
-    return 'Order(orderId: $orderId, patronId: $patronId, restaurantId: $restaurantId, flavorId: $flavorId, thicknessId: $thicknessId, subtotal: $subtotal, tax: $tax, total: $total, discount: $discount, createdAt: $createdAt, updatedAt: $updatedAt, restaurant: $restaurant, flavor: $flavor, thickness: $thickness, orderToppings: $orderToppings)';
+    return 'Order(orderId: $orderId, patronId: $patronId, restaurantId: $restaurantId, flavorId: $flavorId, thicknessId: $thicknessId, subtotal: $subtotal, tax: $tax, total: $total, discount: $discount, pickupTime: $pickupTime, paymentMethod: $paymentMethod, numberOfDrinks: $numberOfDrinks, createdAt: $createdAt, updatedAt: $updatedAt, restaurant: $restaurant, flavor: $flavor, thickness: $thickness, orderToppings: $orderToppings)';
   }
 
   @override
@@ -396,6 +444,12 @@ class _$OrderImpl extends _Order {
             (identical(other.total, total) || other.total == total) &&
             (identical(other.discount, discount) ||
                 other.discount == discount) &&
+            (identical(other.pickupTime, pickupTime) ||
+                other.pickupTime == pickupTime) &&
+            (identical(other.paymentMethod, paymentMethod) ||
+                other.paymentMethod == paymentMethod) &&
+            (identical(other.numberOfDrinks, numberOfDrinks) ||
+                other.numberOfDrinks == numberOfDrinks) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
@@ -422,6 +476,9 @@ class _$OrderImpl extends _Order {
       tax,
       total,
       discount,
+      pickupTime,
+      paymentMethod,
+      numberOfDrinks,
       createdAt,
       updatedAt,
       restaurant,
@@ -454,6 +511,9 @@ abstract class _Order extends Order {
       required final double tax,
       required final double total,
       required final double discount,
+      required final DateTime pickupTime,
+      required final PaymentMethod paymentMethod,
+      required final int numberOfDrinks,
       required final DateTime createdAt,
       required final DateTime updatedAt,
       required final Restaurant restaurant,
@@ -482,6 +542,12 @@ abstract class _Order extends Order {
   double get total;
   @override
   double get discount;
+  @override
+  DateTime get pickupTime;
+  @override
+  PaymentMethod get paymentMethod;
+  @override
+  int get numberOfDrinks;
   @override
   DateTime get createdAt;
   @override

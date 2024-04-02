@@ -12,6 +12,7 @@ import 'auth/state/auth/auth_bloc.dart';
 import 'injection.dart';
 import 'milkshake/state/configs/configs_bloc.dart';
 import 'milkshake/state/milkshake_order/milkshake_order_bloc.dart';
+import 'milkshake/state/orders/orders_bloc.dart';
 import 'milkshake/state/restaurants/restaurants_bloc.dart';
 import 'milkshake/state/user/user_bloc.dart';
 import 'shared/state/connectivity_status/connectivity_status_bloc.dart';
@@ -38,5 +39,8 @@ List<BlocProvider> providers = [
   ),
   BlocProvider<MilkshakeOrderBloc>(
     create: (_) => getIt<MilkshakeOrderBloc>(),
+  ),
+  BlocProvider<OrdersBloc>(
+    create: (_) => getIt<OrdersBloc>()..add(const GetOrdersEvent()),
   ),
 ];

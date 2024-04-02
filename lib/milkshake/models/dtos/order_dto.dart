@@ -8,6 +8,8 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../data/payment_method.dart';
+
 part 'generated/order_dto.freezed.dart';
 part 'generated/order_dto.g.dart';
 
@@ -18,6 +20,9 @@ class OrderDTO with _$OrderDTO {
     required int flavorId,
     required int thicknessId,
     required List<int> toppings,
+    required DateTime pickupTime,
+    required PaymentMethod paymentMethod,
+    required int numberOfDrinks,
   }) = _OrderDTO;
 
   const OrderDTO._();

@@ -14,12 +14,18 @@ import 'package:relative_scale/relative_scale.dart';
 import '../../../../l10n/l10n.dart';
 import '../../../../shared/configs/colors.dart';
 import '../../../shared/widgets/sj_button.dart';
+import '../../models/data/restaurant.dart';
+import '../../models/dtos/order_dto.dart';
 import '../../state/milkshake_order/milkshake_order_bloc.dart';
+import '../../state/orders/orders_bloc.dart';
 
 class CheckoutTab extends StatelessWidget {
   const CheckoutTab({
+    required this.restaurant,
     super.key,
   });
+
+  final Restaurant restaurant;
 
   @override
   Widget build(BuildContext context) {
@@ -97,141 +103,144 @@ class CheckoutTab extends StatelessWidget {
               ),
               child: BlocBuilder<MilkshakeOrderBloc, MilkshakeOrderState>(
                 builder: (context, state) {
-                  return ListView(shrinkWrap: true, children: [
-                    Row(
-                      children: [
-                        Text(
-                          context.l10n.milkshakeOrder_Flavor,
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w400,
-                            fontSize: sy(9),
+                  return ListView(
+                    shrinkWrap: true,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            context.l10n.milkshakeOrder_Flavor,
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w400,
+                              fontSize: sy(9),
+                            ),
                           ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'ZAR ${state.flavor?.cost.toStringAsFixed(2)}',
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w900,
-                            fontSize: sy(10),
+                          const Spacer(),
+                          Text(
+                            'ZAR ${state.flavor?.cost.toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w900,
+                              fontSize: sy(10),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          context.l10n.milkshakeOrder_Thickness,
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w400,
-                            fontSize: sy(9),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            context.l10n.milkshakeOrder_Thickness,
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w400,
+                              fontSize: sy(9),
+                            ),
                           ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'ZAR ${state.thickness?.cost.toStringAsFixed(2)}',
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w900,
-                            fontSize: sy(10),
+                          const Spacer(),
+                          Text(
+                            'ZAR ${state.thickness?.cost.toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w900,
+                              fontSize: sy(10),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    ...state.toppings
-                        .map(
-                          (topping) => Row(
-                            children: [
-                              Text(
-                                topping.name,
-                                style: TextStyle(
-                                  color: AppColors.blue,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: sy(9),
+                        ],
+                      ),
+                      ...state.toppings
+                          .map(
+                            (topping) => Row(
+                              children: [
+                                Text(
+                                  topping.name,
+                                  style: TextStyle(
+                                    color: AppColors.blue,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: sy(9),
+                                  ),
                                 ),
-                              ),
-                              const Spacer(),
-                              Text(
-                                'ZAR ${topping.cost.toStringAsFixed(2)}',
-                                style: TextStyle(
-                                  color: AppColors.blue,
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: sy(10),
+                                const Spacer(),
+                                Text(
+                                  'ZAR ${topping.cost.toStringAsFixed(2)}',
+                                  style: TextStyle(
+                                    color: AppColors.blue,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: sy(10),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
+                          )
+                          .toList(),
+                      const Divider(
+                        color: AppColors.border,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '${context.l10n.milkshakeOrder_Subtotal} (x${state.numberOfDrinks} ${context.l10n.milkshakeOrder_Drinks})',
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w400,
+                              fontSize: sy(9),
+                            ),
                           ),
-                        )
-                        .toList(),
-                    const Divider(
-                      color: AppColors.border,
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          context.l10n.milkshakeOrder_Subtotal,
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w400,
-                            fontSize: sy(9),
+                          const Spacer(),
+                          Text(
+                            'ZAR ${state.subtotal.toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w900,
+                              fontSize: sy(10),
+                            ),
                           ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'ZAR ${state.subtotal.toStringAsFixed(2)}',
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w900,
-                            fontSize: sy(10),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            context.l10n.milkshakeOrder_Tax,
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w400,
+                              fontSize: sy(9),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          context.l10n.milkshakeOrder_Tax,
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w400,
-                            fontSize: sy(9),
+                          const Spacer(),
+                          Text(
+                            'ZAR ${state.taxAmount.toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w900,
+                              fontSize: sy(10),
+                            ),
                           ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'ZAR ${state.taxAmount.toStringAsFixed(2)}',
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w900,
-                            fontSize: sy(10),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            context.l10n.milkshakeOrder_OrderTotal,
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w400,
+                              fontSize: sy(9),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          context.l10n.milkshakeOrder_OrderTotal,
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w400,
-                            fontSize: sy(9),
+                          const Spacer(),
+                          Text(
+                            'ZAR ${state.totalCost.toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: AppColors.blue,
+                              fontWeight: FontWeight.w900,
+                              fontSize: sy(10),
+                            ),
                           ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'ZAR ${state.totalCost.toStringAsFixed(2)}',
-                          style: TextStyle(
-                            color: AppColors.blue,
-                            fontWeight: FontWeight.w900,
-                            fontSize: sy(10),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ]);
+                        ],
+                      ),
+                    ],
+                  );
                 },
               ),
             ),
@@ -240,6 +249,25 @@ class CheckoutTab extends StatelessWidget {
             ),
             SjButton(
               text: context.l10n.milkshakeOrder_Checkout,
+              onTap: () {
+                final MilkshakeOrderState state =
+                    context.read<MilkshakeOrderBloc>().state;
+
+                final OrderDTO dto = OrderDTO(
+                  restaurantId: restaurant.restaurantId,
+                  flavorId: state.flavor!.flavorId,
+                  thicknessId: state.thickness!.thicknessId,
+                  toppings: state.toppings.map((e) => e.toppingId).toList(),
+                  paymentMethod: state.paymentMethod!,
+                  pickupTime: DateTime.now().copyWith(
+                    hour: state.collectionTime.hour,
+                    minute: state.collectionTime.minute,
+                  ),
+                  numberOfDrinks: state.numberOfDrinks,
+                );
+
+                context.read<OrdersBloc>().add(CreateOrderEvent(dto));
+              },
             ),
           ],
         );

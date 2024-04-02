@@ -16,6 +16,9 @@ _$OrderImpl _$$OrderImplFromJson(Map json) => _$OrderImpl(
       tax: (json['tax'] as num).toDouble(),
       total: (json['total'] as num).toDouble(),
       discount: (json['discount'] as num).toDouble(),
+      pickupTime: DateTime.parse(json['pickupTime'] as String),
+      paymentMethod: $enumDecode(_$PaymentMethodEnumMap, json['paymentMethod']),
+      numberOfDrinks: json['numberOfDrinks'] as int,
       createdAt: DateTime.parse(json['createdAt'] as String),
       updatedAt: DateTime.parse(json['updatedAt'] as String),
       restaurant: Restaurant.fromJson(
@@ -40,6 +43,9 @@ Map<String, dynamic> _$$OrderImplToJson(_$OrderImpl instance) =>
       'tax': instance.tax,
       'total': instance.total,
       'discount': instance.discount,
+      'pickupTime': instance.pickupTime.toIso8601String(),
+      'paymentMethod': _$PaymentMethodEnumMap[instance.paymentMethod]!,
+      'numberOfDrinks': instance.numberOfDrinks,
       'createdAt': instance.createdAt.toIso8601String(),
       'updatedAt': instance.updatedAt.toIso8601String(),
       'restaurant': instance.restaurant.toJson(),
@@ -47,3 +53,8 @@ Map<String, dynamic> _$$OrderImplToJson(_$OrderImpl instance) =>
       'thickness': instance.thickness.toJson(),
       'orderToppings': instance.orderToppings.map((e) => e.toJson()).toList(),
     };
+
+const _$PaymentMethodEnumMap = {
+  PaymentMethod.card: 'card',
+  PaymentMethod.cash: 'cash',
+};

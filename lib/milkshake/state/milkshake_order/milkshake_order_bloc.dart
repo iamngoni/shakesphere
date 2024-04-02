@@ -22,6 +22,8 @@ class MilkshakeOrderBloc
     on<UnselectToppingEvent>(onUnselectToppingEvent);
     on<SetCollectionTimeEvent>(onSetCollectionTimeEvent);
     on<SelectPaymentMethodEvent>(onSelectPaymentMethodEvent);
+    on<IncrementNumberOfDrinksEvent>(onIncreaseNumberOfDrinksEvent);
+    on<DecrementNumberOfDrinksEvent>(onDecreaseNumberOfDrinksEvent);
     on<ClearOrderEvent>(onClearOrderEvent);
   }
 
@@ -78,6 +80,20 @@ class MilkshakeOrderBloc
     Emitter<MilkshakeOrderState> emit,
   ) async {
     emit(state.copyWith(paymentMethod: event.paymentMethod));
+  }
+
+  Future<void> onIncreaseNumberOfDrinksEvent(
+    IncrementNumberOfDrinksEvent event,
+    Emitter<MilkshakeOrderState> emit,
+  ) async {
+    emit(state.copyWith(numberOfDrinks: state.numberOfDrinks + 1));
+  }
+
+  Future<void> onDecreaseNumberOfDrinksEvent(
+    DecrementNumberOfDrinksEvent event,
+    Emitter<MilkshakeOrderState> emit,
+  ) async {
+    emit(state.copyWith(numberOfDrinks: state.numberOfDrinks - 1));
   }
 
   Future<void> onClearOrderEvent(

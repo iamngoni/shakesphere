@@ -60,6 +60,20 @@ class SelectPaymentMethodEvent extends MilkshakeOrderEvent {
   List<Object> get props => [paymentMethod];
 }
 
+class IncrementNumberOfDrinksEvent extends MilkshakeOrderEvent {
+  const IncrementNumberOfDrinksEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class DecrementNumberOfDrinksEvent extends MilkshakeOrderEvent {
+  const DecrementNumberOfDrinksEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
 class ClearOrderEvent extends MilkshakeOrderEvent {
   const ClearOrderEvent();
 

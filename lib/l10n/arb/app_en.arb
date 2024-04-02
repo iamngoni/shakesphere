@@ -275,5 +275,53 @@
     "milkshakeOrder_Flavor": "Flavor",
     "@milkshakeOrder_Flavor": {
         "description": "Text displayed on the milkshake order screen"
+    },
+    "home_MyOrders": "My Orders",
+    "@home_MyOrders": {
+        "description": "Text displayed on the home screen"
+    },
+    "home_NoOrders": "No orders placed",
+    "@home_NoOrders": {
+        "description": "Text displayed on the home screen"
+    },
+    "home_Order": "Order",
+    "@home_Order": {
+        "description": "Text displayed on the home screen"
+    },
+    "milkshakeOrder_OrderPlaced": "Order placed successfully!",
+    "@milkshakeOrder_OrderPlaced": {
+        "description": "Text displayed on the home screen"
+    },
+    "milkshakeOrder_OrderPlacedMessage": "Your order has been placed successfully. You will receive a confirmation email shortly.",
+    "@milkshakeOrder_OrderPlacedMessage": {
+        "description": "Text displayed on the home screen"
+    },
+    "milkshakeOrder_OrderStatus": "Order Status",
+    "@milkshakeOrder_OrderStatus": {
+        "description": "Text displayed on the home screen"
+    },
+    "milkshakeOrder_OrderStatusValue": "Success",
+    "@milkshakeOrder_Paid": {
+        "description": "Text displayed on the home screen"
+    },
+    "milkshakeOrder_OrderID": "Order ID",
+    "@milkshakeOrder_OrderID": {
+        "description": "Text displayed on the home screen"
+    },
+    "done_BtnTitle": "Done",
+    "@done_BtnTitle": {
+        "description": "Title of the done button displayed on the home screen"
+    },
+    "milkshakeOrder_PaymentMethod": "Payment Method",
+    "@milkshakeOrder_PaymentMethod": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_NumberOfDrinks": "Number of Drinks",
+    "@milkshakeOrder_NumberOfDrinks": {
+        "description": "Text displayed on the milkshake order screen"
+    },
+    "milkshakeOrder_Drinks": "Drinks",
+    "@milkshakeOrder_Drinks": {
+        "description": "Text displayed on the milkshake order screen"
     }
 }
